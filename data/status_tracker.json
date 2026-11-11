@@ -1,13 +1,13 @@
 {
   "last_summary_sent": null,
-  "scans_completed_this_week": 24,
-  "jobs_evaluated_this_week": 83,
+  "scans_completed_this_week": 25,
+  "jobs_evaluated_this_week": 84,
   "alerts_sent_this_week": 57,
-  "last_scan_time": "2026-11-11T12:30:22.387482",
+  "last_scan_time": "2026-11-11T13:00:23.827920",
   "cv_warning_sent_scanned": false,
   "billing_cycle_month": "2026-11",
-  "monthly_minutes_used": 11.01,
-  "monthly_runs_count": 24,
-  "last_successful_scan_time": "2026-11-11T12:30:40.697438",
+  "monthly_minutes_used": 11.41,
+  "monthly_runs_count": 25,
+  "last_successful_scan_time": "2026-11-11T13:00:46.942710",
   "last_update_alert_sha": "370c3d0e66903f7ddccf7c647168d884999953e6"
 }
