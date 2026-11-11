@@ -769,6 +769,50 @@
       "match_score": 85,
       "scraped_at": "2026-11-11T10:30:58.178048Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489914802",
+      "title": "UX Designer",
+      "company": "TaskVerse",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489914802",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T11:00:46.043208Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4454280482",
+      "title": "User Experience Designer",
+      "company": "Trane Technologies",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://www.linkedin.com/jobs/view/4454280482",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T11:00:46.043249Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4473557458",
+      "title": "UX Designer",
+      "company": "Milwaukee Tool",
+      "location": "Milwaukee, WI",
+      "url": "https://www.linkedin.com/jobs/view/4473557458",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T11:00:46.043262Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4474153016",
+      "title": "AI-Assisted UI/UX Designer",
+      "company": "WIT",
+      "location": "Coimbra, Portugal",
+      "url": "https://www.linkedin.com/jobs/view/4474153016",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T11:00:46.043272Z",
+      "ats_platform": "custom"
     }
   ]
 }
