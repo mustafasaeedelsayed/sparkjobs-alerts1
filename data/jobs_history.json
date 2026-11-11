@@ -87,6 +87,83 @@
       "match_score": 85,
       "scraped_at": "2026-11-11T00:30:56.469807Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487854851",
+      "title": "Director, UX/UI Designer",
+      "company": "Horizon Media",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4487854851",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T01:00:43.593401Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487866333",
+      "title": "Game UX Designer",
+      "company": "31st Union",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/4487866333",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-11T01:00:43.593439Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487860560",
+      "title": "UI/UX Designer",
+      "company": "GRVTY",
+      "location": "McLean, VA",
+      "url": "https://www.linkedin.com/jobs/view/4487860560",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T01:00:43.593448Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487867274",
+      "title": "Games UX Designer",
+      "company": "31st Union",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/4487867274",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-11T01:00:43.593456Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489669772",
+      "title": "UI / UX Designer",
+      "company": "Isha LIFE Health Solutions",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://www.linkedin.com/jobs/view/4489669772",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T01:00:43.593464Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489667678",
+      "title": "Hardware Interaction Designer",
+      "company": "\u014cURA",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/4489667678",
+      "source": "Linkedin",
+      "match_score": 35,
+      "scraped_at": "2026-11-11T01:00:43.593470Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489655690",
+      "title": "User Experience Designer",
+      "company": "Brand Vision",
+      "location": "Greater Toronto Area, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4489655690",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T01:00:43.593476Z",
+      "ats_platform": "custom"
     }
   ]
 }
