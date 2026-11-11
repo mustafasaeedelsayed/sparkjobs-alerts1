@@ -208,6 +208,72 @@
       "match_score": 60,
       "scraped_at": "2026-11-11T02:01:23.940997Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4480447270",
+      "title": "UI/UX Designer (Shopify)",
+      "company": "Digivizer",
+      "location": "National Capital Region, Philippines",
+      "url": "https://www.linkedin.com/jobs/view/4480447270",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T04:00:47.670966Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488647555",
+      "title": "UI Designer (Remote)",
+      "company": "Joblet-AI",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488647555",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T04:00:47.671015Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488637633",
+      "title": "Digital Designer (Figma)",
+      "company": "ARTISAN - Creative, Digital and Marketing Recruitment",
+      "location": "Sydney, New South Wales, Australia",
+      "url": "https://www.linkedin.com/jobs/view/4488637633",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T04:00:47.671027Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488634736",
+      "title": "Senior UX Designer - B2C (214387)",
+      "company": "Aquent",
+      "location": "Bentonville, AR",
+      "url": "https://www.linkedin.com/jobs/view/4488634736",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T04:00:47.671038Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487859999",
+      "title": "Graphic / Multimedia Designer  - Web, Adobe Creative Suit, UI",
+      "company": "Creative Circle",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/4487859999",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T04:00:47.671051Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489670870",
+      "title": "Designer, Marketing & Communications",
+      "company": "Terry Fox Foundation",
+      "location": "North York, Ontario, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4489670870",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T04:00:47.671061Z",
+      "ats_platform": "custom"
     }
   ]
 }
