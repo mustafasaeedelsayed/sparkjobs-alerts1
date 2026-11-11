@@ -1429,6 +1429,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-11T18:31:42.380809Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488233959",
+      "title": "Senior Multidisciplinary Designer (UI/UX & Graphic Design)",
+      "company": "Opvia",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488233959",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T19:31:01.314390Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488241724",
+      "title": "UX/UI Designer",
+      "company": "Steampunk, Inc.",
+      "location": "McLean, VA",
+      "url": "https://www.linkedin.com/jobs/view/4488241724",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T19:31:01.314426Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489022906",
+      "title": "UI/UX Designer",
+      "company": "Fashion Forth Indonesia",
+      "location": "Surabaya, East Java, Indonesia",
+      "url": "https://www.linkedin.com/jobs/view/4489022906",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T19:31:01.314436Z",
+      "ats_platform": "custom"
     }
   ]
 }
