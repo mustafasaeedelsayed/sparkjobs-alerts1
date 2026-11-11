@@ -989,6 +989,28 @@
       "match_score": 85,
       "scraped_at": "2026-11-11T14:00:45.521712Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4454770343",
+      "title": "Senior UX Designer, Provider Experience",
+      "company": "Datavant",
+      "location": "Barcelona, Catalonia, Spain",
+      "url": "https://www.linkedin.com/jobs/view/4454770343",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T14:31:03.747819Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4455795309",
+      "title": "Principal UX Designer, North American Stores Design",
+      "company": "Amazon",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/4455795309",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T14:31:03.748150Z",
+      "ats_platform": "custom"
     }
   ]
 }
