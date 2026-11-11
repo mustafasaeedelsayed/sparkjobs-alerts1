@@ -912,6 +912,17 @@
       "match_score": 85,
       "scraped_at": "2026-11-11T12:01:04.092570Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4478962900",
+      "title": "(USA) Senior UX Designer",
+      "company": "Walmart",
+      "location": "Bentonville, AR",
+      "url": "https://www.linkedin.com/jobs/view/4478962900",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T13:00:46.937132Z",
+      "ats_platform": "custom"
     }
   ]
 }
