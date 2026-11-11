@@ -516,6 +516,17 @@
       "match_score": 65,
       "scraped_at": "2026-11-11T06:30:52.723626Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "in-180c6af75b074d3d",
+      "title": "Sr UX/UI Designer",
+      "company": "Moder",
+      "location": "Remote, US",
+      "url": "https://archwellessentials.wd1.myworkdayjobs.com/en-US/modercareers/job/Remote-USA/Sr-UX-UI-Designer_JR107374-2",
+      "source": "Indeed",
+      "match_score": 60,
+      "scraped_at": "2026-11-11T07:01:02.465266Z",
+      "ats_platform": "workday"
     }
   ]
 }
