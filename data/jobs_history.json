@@ -164,6 +164,50 @@
       "match_score": 85,
       "scraped_at": "2026-11-11T01:00:43.593476Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4478852223",
+      "title": "Senior / Digital Graphics Designer, The Business Times (Contract)",
+      "company": "SPH Media",
+      "location": "Singapore, Singapore",
+      "url": "https://www.linkedin.com/jobs/view/4478852223",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T02:01:23.940949Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489673311",
+      "title": "Next Level Experience Designer",
+      "company": "Corporate Tools",
+      "location": "Portland, Oregon Metropolitan Area",
+      "url": "https://www.linkedin.com/jobs/view/4489673311",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T02:01:23.940982Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489498268",
+      "title": "Senior Framer Designer",
+      "company": "HYYV",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489498268",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-11T02:01:23.940990Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489673309",
+      "title": "Digital Marketing Graphic Designer",
+      "company": "Inked Brands",
+      "location": "Bowling Green, KY",
+      "url": "https://www.linkedin.com/jobs/view/4489673309",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-11T02:01:23.940997Z",
+      "ats_platform": "custom"
     }
   ]
 }
