@@ -1,15 +1,38 @@
 {
-  "gemini_api_key": "",
-  "telegram_bot_token": "",
-  "telegram_chat_id": "",
-  "scraperapi_key": "",
+  "gemini_api_key": "AQ.Ab8RN6LaeGjxMIkVtBagi9d3pSdHuCQPKpBEOgJuSR75wNHy8g",
+  "telegram_bot_token": "8878087387:AAGi98We03l52W3XH1iw4c-O8gL1UMNEb60",
+  "telegram_chat_id": "1082191929",
+  "scraperapi_key": "58b591e752c6fdd905f48978fa9979b9",
   "language": "en",
   "global_search": {
-    "job_titles": [],
+    "job_titles": [
+      "UI/UX Designer"
+    ],
     "years_of_experience": "1-3",
-    "exclude_keywords": [],
+    "exclude_keywords": [
+      "Product manager",
+      "product designer",
+      "owner",
+      "developer"
+    ],
     "cv_version": "default_cv",
+    "cv_original_name": "Mustafa Saeed Elsayed - UI_UX Designer CV.pdf",
     "scan_frequency": "30m"
   },
-  "target_countries": []
+  "target_countries": [
+    {
+      "country": "Worldwide",
+      "remote_only": true,
+      "requires_visa": false,
+      "min_match_score": 71,
+      "active": true
+    },
+    {
+      "country": "Egypt",
+      "remote_only": false,
+      "requires_visa": false,
+      "min_match_score": 95,
+      "active": true
+    }
+  ]
 }
