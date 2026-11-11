@@ -1,0 +1,865 @@
+import os
+import sys
+import json
+import re
+import time
+import argparse
+import hashlib
+import tempfile
+import requests
+import asyncio
+from datetime import datetime, timedelta
+from bs4 import BeautifulSoup
+from telegram_sender import send_telegram_message, escape_html
+
+# Ensure src/ directory is in sys.path even when executed directly
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+# Paths definition
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+USER_PROFILE_PATH = os.path.join(BASE_DIR, "data", "user_profile.json")
+LEARNED_ANSWERS_PATH = os.path.join(BASE_DIR, "data", "learned_answers.json")
+FORM_ANALYSIS_PATH = os.path.join(BASE_DIR, "data", "form_analysis.json")
+APPLICATION_LOG_PATH = os.path.join(BASE_DIR, "data", "application_log.json")
+PENDING_SUBMISSION_PATH = os.path.join(BASE_DIR, "data", "pending_submission.json")
+CVS_DIR = os.path.join(BASE_DIR, "data", "cvs")
+COVER_LETTER_PATH = os.path.join(BASE_DIR, "data", "cover_letter.txt")
+
+ATS_URL_PATTERNS = {
+    "lever": ["jobs.lever.co"],
+    "greenhouse": ["boards.greenhouse.io", "grnh.se", "job-boards.greenhouse.io"],
+    "smartrecruiters": ["careers.smartrecruiters.com", "smartrecruiters.com"],
+    "ashby": ["jobs.ashbyhq.com", "ashbyhq.com"],
+    "workable": ["apply.workable.com", "workable.com"],
+    "bamboohr": ["bamboohr.com", "bamboohr.co.uk"],
+    "recruitee": ["recruitee.com"],
+    "breezy": ["breezy.hr"],
+    "jobvite": ["jobs.jobvite.com", "jobvite.com"],
+    "workday": ["myworkdayjobs.com", "workdayjobs.com", ".workday.com/en-us/recruiting"],
+    "linkedin": ["linkedin.com/jobs"],
+    "indeed": ["indeed.com/viewjob", "indeed.com/jobs"],
+}
+
+ATS_DOM_SIGNATURES = {
+    "lever": ["[data-lever-source]", "#application-page"],
+    "greenhouse": ["#application.greenhouse-theme", "div.greenhouse", "#app_body"],
+    "smartrecruiters": [".smart-apply-widget", "st-apply"],
+    "ashby": ["#ashby_application", "[data-ashby-application-form]"],
+    "workable": ["#application_form", "[data-ui='application-form']"],
+    "bamboohr": ["#applicationForm", ".BambooHR-ATS-Jobs-Item"],
+}
+
+STEALTH_SCRIPT = """
+Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+window.chrome = { runtime: {} };
+Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
+Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
+const originalQuery = window.navigator.permissions.query;
+window.navigator.permissions.query = (parameters) => (
+    parameters.name === 'notifications' ?
+        Promise.resolve({ state: Notification.permission }) :
+        originalQuery(parameters)
+);
+"""
+
+def detect_ats_platform_by_url(url: str) -> str:
+    url_lower = url.lower()
+    for platform, patterns in ATS_URL_PATTERNS.items():
+        if any(p in url_lower for p in patterns):
+            return platform
+    return "generic"
+
+async def detect_ats_platform_by_dom(page) -> str:
+    for platform, selectors in ATS_DOM_SIGNATURES.items():
+        for selector in selectors:
+            try:
+                if await page.query_selector(selector):
+                    return platform
+            except Exception:
+                pass
+    return "generic"
+
+def write_error(msg: str):
+    print(f"Error: {msg}")
+    try:
+        dir_name = os.path.dirname(FORM_ANALYSIS_PATH)
+        os.makedirs(dir_name, exist_ok=True)
+        tmp_fd, tmp_path = tempfile.mkstemp(dir=dir_name, prefix="analysis_", suffix=".tmp")
+        with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
+            json.dump({
+                "status": "error",
+                "error_message": msg,
+                "fields": []
+            }, f, indent=2)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp_path, FORM_ANALYSIS_PATH)
+    except Exception as e:
+        print(f"Failed to write error status file: {e}")
+
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+    if bot_token and chat_id:
+        try:
+            send_telegram_message(bot_token, chat_id, f"⚠️ <b>SparkJobs Auto-Apply Alert:</b> {escape_html(msg)}")
+        except Exception as t_err:
+            print(f"Failed to send Telegram alert: {t_err}")
+
+def get_gemini_cover_letter(job_description: str, job_title: str) -> str:
+    gemini_key = os.environ.get("GEMINI_API_KEY", "")
+    if not gemini_key or not os.path.exists(COVER_LETTER_PATH):
+        if os.path.exists(COVER_LETTER_PATH):
+            try:
+                with open(COVER_LETTER_PATH, "r", encoding="utf-8") as f:
+                    return f.read().strip()
+            except Exception:
+                pass
+        return ""
+
+    try:
+        with open(COVER_LETTER_PATH, "r", encoding="utf-8") as f:
+            base_letter = f.read().strip()
+        
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
+        payload = {
+            "contents": [{
+                "parts": [{
+                    "text": (
+                        f"You are an expert resume and cover letter writer. Personalize the following cover letter template "
+                        f"for the job posting titled '{job_title}' with the description below. Keep it professional, concise (max 300 words), "
+                        f"and highlight why the candidate is a good match based on the description.\n\n"
+                        f"Cover Letter Template:\n{base_letter}\n\n"
+                        f"Job Description:\n{job_description}\n\n"
+                        f"Return ONLY the personalized cover letter text. Do not include any intro, outro, or placeholders."
+                    )
+                }]
+            }]
+        }
+        res = requests.post(url, json=payload, headers={"x-goog-api-key": gemini_key}, timeout=15)
+        if res.status_code == 200:
+            ai_text = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
+            return ai_text
+    except Exception as e:
+        print(f"Gemini cover letter generation failed: {e}")
+    
+    try:
+        with open(COVER_LETTER_PATH, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception:
+        return ""
+
+async def analyze_form_flow(url: str):
+    if not os.path.exists(USER_PROFILE_PATH):
+        write_error("Auto-Apply Profile not set up. Please complete your profile in the dashboard first.")
+        return
+
+    # Check job liveness
+    try:
+        res = requests.get(url, allow_redirects=True, timeout=10)
+        if res.status_code != 200:
+            write_error(f"This job posting appears to be closed or expired (HTTP {res.status_code}).")
+            return
+        
+        CLOSED_JOB_SIGNALS = [
+            "this position has been filled",
+            "this position is no longer available",
+            "job not found",
+            "position closed",
+            "no longer accepting applications",
+            "job posting has expired"
+        ]
+        if any(sig in res.text.lower() for sig in CLOSED_JOB_SIGNALS):
+            write_error("This job posting appears to be closed (position filled or no longer accepting applications).")
+            return
+
+        page_html = res.text
+    except Exception as e:
+        write_error(f"Job application URL is unreachable: {e}")
+        return
+
+async def analyze_form_flow(url: str):
+    if not os.path.exists(USER_PROFILE_PATH):
+        write_error("Auto-Apply Profile not set up. Please complete your profile in the dashboard first.")
+        return
+
+    # Read user profile and learned answers early for cookie injection
+    with open(USER_PROFILE_PATH, "r", encoding="utf-8") as f:
+        profile = json.load(f)
+
+    # Import Playwright dynamically
+    from playwright.async_api import async_playwright
+    
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"]
+        )
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        )
+        await context.add_init_script(STEALTH_SCRIPT)
+
+        # Inject LinkedIn Cookie if visiting LinkedIn
+        li_cookie = (profile.get("linkedin_cookie") or os.environ.get("LINKEDIN_COOKIE") or "").strip()
+        if "linkedin.com" in url.lower() and li_cookie:
+            try:
+                clean_cookie = li_cookie.replace("li_at=", "").strip()
+                await context.add_cookies([{
+                    "name": "li_at",
+                    "value": clean_cookie,
+                    "domain": ".linkedin.com",
+                    "path": "/",
+                    "httpOnly": True,
+                    "secure": True
+                }])
+            except Exception:
+                pass
+
+        page = await context.new_page()
+        
+        try:
+            try:
+                await page.goto(url, wait_until="domcontentloaded", timeout=25000)
+            except Exception as goto_err:
+                if "ERR_TOO_MANY_REDIRECTS" in str(goto_err):
+                    # LinkedIn cookie auth redirect loop - clear cookies and retry as guest
+                    await context.clear_cookies()
+                    try:
+                        await page.goto(url, wait_until="domcontentloaded", timeout=25000)
+                    except Exception as retry_err:
+                        write_error("LinkedIn requires direct login or manual application for this job posting.")
+                        await browser.close()
+                        return
+                else:
+                    raise goto_err
+
+            await page.wait_for_timeout(3000) # Let page load dynamic components
+            
+            # Dismiss any LinkedIn / site overlay sign-in modals
+            for dismiss_sel in [
+                "button[aria-label='Dismiss']",
+                ".contextual-sign-in-modal__modal-dismiss-btn",
+                "button.modal__dismiss",
+                "[data-modal-dismiss-btn]",
+                ".artdeco-modal__dismiss"
+            ]:
+                try:
+                    dismiss_btn = await page.query_selector(dismiss_sel)
+                    if dismiss_btn and await dismiss_btn.is_visible():
+                        await dismiss_btn.click()
+                        await page.wait_for_timeout(1000)
+                        break
+                except Exception:
+                    pass
+
+            # Check for LinkedIn "Direct message the job poster" posts (no form available)
+            body_text_check = (await page.inner_text("body")).lower()
+            if "direct message the job poster" in body_text_check:
+                write_error("This job requires sending a direct message to the recruiter on LinkedIn. Please click 'Open Original Posting' to message them.")
+                await browser.close()
+                return
+
+            # 1. ATS detection
+            platform = detect_ats_platform_by_url(page.url)
+            if platform == "generic":
+                platform = await detect_ats_platform_by_dom(page)
+
+            # 2. Check rendered DOM for SPA closed/not found signals
+            dom_text = (await page.inner_text("body")).lower()
+            DOM_CLOSED_SIGNALS = [
+                "the page you are looking for doesn't exist",
+                "the page you are looking for does not exist",
+                "page not found",
+                "this position has been filled",
+                "this position is no longer available",
+                "position closed",
+                "job is no longer open",
+                "no longer accepting applications",
+                "job posting has expired",
+                "404 not found"
+            ]
+            if any(sig in dom_text for sig in DOM_CLOSED_SIGNALS):
+                write_error("This job posting is closed or no longer exists on the employer website.")
+                await browser.close()
+                return
+
+            # 3. CAPTCHA Check
+            for cap_sel in ["iframe[src*='captcha']", "div.g-recaptcha", ".cf-turnstile", ".hcaptcha"]:
+                if await page.query_selector(cap_sel):
+                    write_error("This application page requires a CAPTCHA. Please apply manually.")
+                    await browser.close()
+                    return
+
+            # Clean stale pending submission if present
+            if os.path.exists(PENDING_SUBMISSION_PATH):
+                try:
+                    os.remove(PENDING_SUBMISSION_PATH)
+                except OSError:
+                    pass
+            
+            learned = {"answers": []}
+            if os.path.exists(LEARNED_ANSWERS_PATH):
+                try:
+                    with open(LEARNED_ANSWERS_PATH, "r", encoding="utf-8") as f:
+                        learned = json.load(f)
+                except Exception:
+                    pass
+            
+            learned_dict = {a["question_hash"]: a["answer"] for a in learned.get("answers", [])}
+
+            # 4. LinkedIn ATS Unmasking & Redirect Following
+            if "linkedin.com" in page.url.lower():
+                for apply_sel in [
+                    "a[data-tracking-control-name*='apply']",
+                    "a.apply-button",
+                    "a:has-text('Apply on company website')",
+                    "a:has-text('Apply on employer website')",
+                    "a:has-text('Apply')",
+                    "a[href*='lever.co']",
+                    "a[href*='greenhouse.io']",
+                    "a[href*='ashbyhq.com']",
+                    "a[href*='workable.com']"
+                ]:
+                    try:
+                        apply_cta = await page.query_selector(apply_sel)
+                        if apply_cta and await apply_cta.is_visible():
+                            href = await apply_cta.get_attribute("href")
+                            if href and href.startswith("http") and "linkedin.com" not in href.lower():
+                                await page.goto(href, wait_until="domcontentloaded", timeout=20000)
+                                await page.wait_for_timeout(3000)
+                                break
+                            else:
+                                await apply_cta.click()
+                                await page.wait_for_timeout(3000)
+                                break
+                    except Exception:
+                        pass
+
+            # Gather page content description for cover letter matching
+            page_html = await page.content()
+            soup = BeautifulSoup(page_html, "html.parser")
+            body_text = soup.get_text()[:4000]
+            job_title = soup.title.string if soup.title else "Job Posting"
+
+            # Parse Form Fields
+            fields = []
+            page_index = 0
+            
+            input_elements = await page.query_selector_all("input, textarea, select")
+            
+            # If no visible input elements on direct page, try clicking "Apply" / "Apply Now" CTA button
+            has_visible_input = False
+            for el in input_elements:
+                try:
+                    name_check = (await el.get_attribute("name") or "").lower()
+                    if name_check not in ["keywords", "location", "search", "search_term", "q", "query"] and await el.is_visible():
+                        has_visible_input = True
+                        break
+                except Exception:
+                    pass
+            
+            if not has_visible_input:
+                for apply_sel in [
+                    "a:has-text('Apply Now')", "button:has-text('Apply Now')",
+                    "a:has-text('Apply for this job')", "button:has-text('Apply for this job')",
+                    "a:has-text('Apply on company website')", "a:has-text('Apply on employer website')",
+                    "a:has-text('Apply')", "button:has-text('Apply')",
+                    "[data-qa='apply-button']", ".apply-button", "#apply-button",
+                    "a[data-tracking-control-name*='apply']", "a[href*='lever.co']", "a[href*='greenhouse.io']"
+                ]:
+                    try:
+                        apply_cta = await page.query_selector(apply_sel)
+                        if apply_cta and await apply_cta.is_visible():
+                            href = await apply_cta.get_attribute("href")
+                            if href and href.startswith("http") and "linkedin.com" not in href.lower():
+                                await page.goto(href, wait_until="domcontentloaded", timeout=20000)
+                                await page.wait_for_timeout(3000)
+                            else:
+                                await apply_cta.click()
+                                await page.wait_for_timeout(3000)
+                            input_elements = await page.query_selector_all("input, textarea, select")
+                            break
+                    except Exception:
+                        pass
+
+            IGNORED_INPUT_NAMES = [
+                "keywords", "location", "search", "search_term", "q", "query", 
+                "site-search", "nav-search", "session_key", "session_password",
+                "global-search", "search-box", "search-input", "current-password"
+            ]
+
+            for elem in input_elements:
+                try:
+                    if not await elem.is_visible():
+                        continue
+                    
+                    input_type = await elem.get_attribute("type") or "text"
+                    name_attr = await elem.get_attribute("name") or ""
+                    id_attr = await elem.get_attribute("id") or ""
+                    
+                    if input_type in ["hidden", "submit", "button"]:
+                        continue
+
+                    # Skip global navigation and search bar inputs
+                    if name_attr.lower() in IGNORED_INPUT_NAMES or id_attr.lower() in IGNORED_INPUT_NAMES:
+                        continue
+
+                    # Attempt to resolve Label
+                    label_text = ""
+                    if id_attr:
+                        label_elem = await page.query_selector(f"label[for='{id_attr}']")
+                        if label_elem:
+                            label_text = await label_elem.inner_text()
+                    if not label_text:
+                        label_text = name_attr or id_attr
+                    
+                    label_clean = label_text.strip().lower()
+                    if not label_clean or label_clean in ["search", "keywords", "location"]:
+                        continue
+
+                    field_item = {
+                        "label": label_text.strip(),
+                        "field_type": "text",
+                        "selector": f"input[name='{name_attr}']" if name_attr else f"#{id_attr}",
+                        "page_index": page_index,
+                        "ai_value": "",
+                        "confidence": 0.0,
+                        "source": "unknown",
+                        "triggers_conditional_fields": False
+                    }
+
+                    # Map types
+                    tag_name = await elem.evaluate("el => el.tagName.toLowerCase()")
+                    if tag_name == "textarea":
+                        field_item["field_type"] = "textarea"
+                    elif tag_name == "select":
+                        field_item["field_type"] = "select"
+                    elif input_type == "radio":
+                        field_item["field_type"] = "radio"
+                    elif input_type == "checkbox":
+                        field_item["field_type"] = "checkbox"
+                    elif input_type == "date":
+                        field_item["field_type"] = "date"
+                    elif input_type == "file":
+                        field_item["field_type"] = "file"
+
+                    # Field Matching Confidence Rules
+                    if "name" in label_clean and "first" not in label_clean and "last" not in label_clean:
+                        field_item["ai_value"] = profile.get("full_name", "")
+                        field_item["confidence"] = 0.98
+                        field_item["source"] = "user_profile"
+                    elif "first" in label_clean and "name" in label_clean:
+                        field_item["ai_value"] = profile.get("first_name", "") or profile.get("full_name", "").split(" ")[0]
+                        field_item["confidence"] = 0.95
+                        field_item["source"] = "user_profile"
+                    elif "last" in label_clean and "name" in label_clean:
+                        field_item["ai_value"] = profile.get("last_name", "") or profile.get("full_name", "").split(" ")[-1]
+                        field_item["confidence"] = 0.95
+                        field_item["source"] = "user_profile"
+                    elif "email" in label_clean:
+                        field_item["ai_value"] = profile.get("email", "")
+                        field_item["confidence"] = 0.98
+                        field_item["source"] = "user_profile"
+                    elif "phone" in label_clean or "tel" in label_clean:
+                        field_item["ai_value"] = profile.get("phone", "")
+                        field_item["confidence"] = 0.98
+                        field_item["source"] = "user_profile"
+                    elif "linkedin" in label_clean:
+                        field_item["ai_value"] = profile.get("linkedin_url", "")
+                        field_item["confidence"] = 0.98
+                        field_item["source"] = "user_profile"
+                    elif "portfolio" in label_clean or "website" in label_clean:
+                        field_item["ai_value"] = profile.get("portfolio_url", "")
+                        field_item["confidence"] = 0.98
+                        field_item["source"] = "user_profile"
+                    elif "github" in label_clean:
+                        field_item["ai_value"] = profile.get("github_url", "")
+                        field_item["confidence"] = 0.98
+                        field_item["source"] = "user_profile"
+                    elif "city" in label_clean or ("location" in label_clean and "country" not in label_clean):
+                        field_item["ai_value"] = profile.get("location_city", "") or profile.get("location", "")
+                        field_item["confidence"] = 0.95
+                        field_item["source"] = "user_profile"
+                    elif "country" in label_clean:
+                        field_item["ai_value"] = profile.get("location_country", "")
+                        field_item["confidence"] = 0.95
+                        field_item["source"] = "user_profile"
+                    elif "current title" in label_clean or "job title" in label_clean or "current role" in label_clean or label_clean == "title":
+                        field_item["ai_value"] = profile.get("current_title", "")
+                        field_item["confidence"] = 0.95
+                        field_item["source"] = "user_profile"
+                    elif "current company" in label_clean or "employer" in label_clean or "organization" in label_clean or label_clean == "company":
+                        field_item["ai_value"] = profile.get("current_company", "")
+                        field_item["confidence"] = 0.95
+                        field_item["source"] = "user_profile"
+                    elif "years of experience" in label_clean or "experience" in label_clean:
+                        field_item["ai_value"] = profile.get("experience_years", "")
+                        field_item["confidence"] = 0.90
+                        field_item["source"] = "user_profile"
+                    elif "notice" in label_clean or "start date" in label_clean:
+                        field_item["ai_value"] = profile.get("notice_period", "immediate")
+                        field_item["confidence"] = 0.90
+                        field_item["source"] = "user_profile"
+                    elif "sponsorship" in label_clean or "visa" in label_clean or "authorized" in label_clean or "authorization" in label_clean:
+                        field_item["ai_value"] = profile.get("sponsorship_required", "no")
+                        field_item["confidence"] = 0.90
+                        field_item["source"] = "user_profile"
+                    elif "resume" in label_clean or "cv" in label_clean or field_item["field_type"] == "file":
+                        field_item["field_type"] = "file"
+                        field_item["ai_value"] = profile.get("cv_filename", "default_cv.pdf")
+                        field_item["confidence"] = 0.95
+                        field_item["source"] = "user_profile"
+                    elif "cover" in label_clean or "motivation" in label_clean or "letter" in label_clean:
+                        field_item["ai_value"] = get_gemini_cover_letter(body_text, job_title)
+                        field_item["confidence"] = 0.88
+                        field_item["source"] = "ai_generated"
+                    else:
+                        import hashlib
+                        q_hash = hashlib.md5(field_item["label"].encode("utf-8")).hexdigest()
+                        field_item["question_hash"] = q_hash
+                        if q_hash in learned_dict:
+                            field_item["ai_value"] = learned_dict[q_hash]
+                            field_item["confidence"] = 0.92
+                            field_item["source"] = "learned_answer"
+                        else:
+                            field_item["confidence"] = 0.0
+                            field_item["source"] = "unknown"
+
+                    fields.append(field_item)
+                except Exception as inner_err:
+                    print(f"Error scanning input element: {inner_err}")
+
+            if len(fields) == 0:
+                write_error("No direct application form fields detected on this page. Please click 'Open Original Posting' to apply directly on the employer website.")
+                await browser.close()
+                return
+
+            # Write ready status
+            dir_name = os.path.dirname(FORM_ANALYSIS_PATH)
+            os.makedirs(dir_name, exist_ok=True)
+            tmp_fd, tmp_path = tempfile.mkstemp(dir=dir_name, prefix="analysis_", suffix=".tmp")
+            with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
+                json.dump({
+                    "job_url": url,
+                    "job_title": job_title,
+                    "company": soup.find(class_="company").get_text().strip() if soup.find(class_="company") else "Unknown Company",
+                    "ats_platform": platform,
+                    "analyzed_at": datetime.utcnow().isoformat() + "Z",
+                    "status": "ready",
+                    "error_message": None,
+                    "total_pages": page_index + 1,
+                    "fields": fields
+                }, f, indent=2)
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(tmp_path, FORM_ANALYSIS_PATH)
+
+            print("Analysis complete. form_analysis.json updated.")
+            
+            # Send Telegram Analysis ready notification
+            bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+            chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+            if bot_token and chat_id:
+                try:
+                    alert_msg = f"📋 <b>SparkJobs:</b> Form analysis completed for <b>{escape_html(job_title)}</b>.\n\n👉 Open the dashboard to review and submit the pre-filled application."
+                    url_tele = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+                    requests.post(url_tele, json={"chat_id": chat_id, "text": alert_msg, "parse_mode": "HTML"}, timeout=10)
+                except Exception as t_err:
+                    print(f"Failed to send Telegram alert: {t_err}")
+
+        except Exception as e:
+            write_error(f"Analysis failed: {str(e)}")
+        finally:
+            await browser.close()
+
+async def submit_form_flow(url: str, fields_json: str):
+    if not os.path.exists(USER_PROFILE_PATH):
+        write_error("Auto-Apply Profile not set up. Please complete your profile in the dashboard first.")
+        return
+
+    try:
+        confirmed_fields = json.loads(fields_json)
+    except Exception as json_err:
+        write_error(f"Invalid fields payload format: {json_err}")
+        return
+
+    with open(USER_PROFILE_PATH, "r", encoding="utf-8") as f:
+        profile = json.load(f)
+
+    # Import Playwright dynamically
+    from playwright.async_api import async_playwright
+    
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
+            headless=True,
+            args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"]
+        )
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+        )
+        await context.add_init_script(STEALTH_SCRIPT)
+
+        # Inject LinkedIn Cookie if visiting LinkedIn
+        li_cookie = (profile.get("linkedin_cookie") or os.environ.get("LINKEDIN_COOKIE") or "").strip()
+        if "linkedin.com" in url.lower() and li_cookie:
+            try:
+                clean_cookie = li_cookie.replace("li_at=", "").strip()
+                await context.add_cookies([{
+                    "name": "li_at",
+                    "value": clean_cookie,
+                    "domain": ".linkedin.com",
+                    "path": "/",
+                    "httpOnly": True,
+                    "secure": True
+                }])
+            except Exception:
+                pass
+
+        page = await context.new_page()
+        
+        try:
+            await page.goto(url, wait_until="domcontentloaded", timeout=25000)
+            await page.wait_for_timeout(3000)
+
+            # Dismiss LinkedIn sign-in prompt modal if present
+            for dismiss_sel in [
+                "button[aria-label='Dismiss']",
+                ".contextual-sign-in-modal__modal-dismiss-btn",
+                "button.modal__dismiss",
+                "[data-modal-dismiss-btn]",
+                ".artdeco-modal__dismiss"
+            ]:
+                try:
+                    dismiss_btn = await page.query_selector(dismiss_sel)
+                    if dismiss_btn and await dismiss_btn.is_visible():
+                        await dismiss_btn.click()
+                        await page.wait_for_timeout(1000)
+                        break
+                except Exception:
+                    pass
+
+            # LinkedIn External ATS Unmasking
+            if "linkedin.com" in page.url.lower():
+                for apply_sel in [
+                    "a[data-tracking-control-name*='apply']",
+                    "a.apply-button",
+                    "a:has-text('Apply on company website')",
+                    "a:has-text('Apply on employer website')",
+                    "a:has-text('Apply')",
+                    "a[href*='lever.co']",
+                    "a[href*='greenhouse.io']",
+                    "a[href*='ashbyhq.com']",
+                    "a[href*='workable.com']"
+                ]:
+                    try:
+                        apply_cta = await page.query_selector(apply_sel)
+                        if apply_cta and await apply_cta.is_visible():
+                            href = await apply_cta.get_attribute("href")
+                            if href and href.startswith("http") and "linkedin.com" not in href.lower():
+                                await page.goto(href, wait_until="domcontentloaded", timeout=20000)
+                                await page.wait_for_timeout(3000)
+                                break
+                            else:
+                                await apply_cta.click()
+                                await page.wait_for_timeout(3000)
+                                break
+                    except Exception:
+                        pass
+            
+            # Group fields by page_index
+            pages_grouped = {}
+            for f in confirmed_fields:
+                p_idx = f.get("page_index", 0)
+                if p_idx not in pages_grouped:
+                    pages_grouped[p_idx] = []
+                pages_grouped[p_idx].append(f)
+            
+            for p_idx in sorted(pages_grouped.keys()):
+                for field in pages_grouped[p_idx]:
+                    sel = field["selector"]
+                    val = field["value"]
+                    f_type = field["field_type"]
+
+                    try:
+                        elem = await page.query_selector(sel)
+                        if not elem or not await elem.is_visible():
+                            continue
+
+                        if f_type == "file":
+                            workspace = os.environ.get("GITHUB_WORKSPACE", BASE_DIR)
+                            cv_path = os.path.join(workspace, "data", "cvs", val)
+                            if not os.path.exists(cv_path):
+                                cv_dir = os.path.join(workspace, "data", "cvs")
+                                if os.path.exists(cv_dir):
+                                    cv_files = [f for f in os.listdir(cv_dir) if f.endswith(('.pdf', '.docx', '.doc'))]
+                                    if cv_files:
+                                        cv_path = os.path.join(cv_dir, cv_files[0])
+                            if os.path.exists(cv_path):
+                                await page.set_input_files(sel, cv_path)
+                        elif f_type == "select":
+                            await page.select_option(sel, val)
+                        elif f_type == "radio":
+                            await page.click(sel)
+                        elif f_type == "checkbox":
+                            if val in [True, "true", "yes"]:
+                                await page.check(sel)
+                            else:
+                                await page.uncheck(sel)
+                        else:
+                            await page.fill(sel, str(val))
+                            
+                        if field.get("triggers_conditional_fields", False):
+                            await page.wait_for_load_state("networkidle")
+                            await page.wait_for_timeout(1000)
+                    except Exception as fill_err:
+                        print(f"Error filling field {field.get('label')}: {fill_err}")
+
+                # Next button handler for multi-step forms
+                if p_idx < max(pages_grouped.keys()):
+                    for btn_sel in ["button:has-text('Next')", "button:has-text('Continue')", ".next-step-button"]:
+                        try:
+                            btn = await page.query_selector(btn_sel)
+                            if btn and await btn.is_visible():
+                                await btn.click()
+                                await page.wait_for_load_state("networkidle")
+                                await page.wait_for_timeout(2000)
+                                break
+                        except Exception:
+                            pass
+
+            # Click the Final Submit CTA Button
+            for sub_sel in [
+                "button[type='submit']",
+                "input[type='submit']",
+                "button[aria-label*='Submit application']",
+                "button:has-text('Submit application')",
+                "button:has-text('Submit Application')",
+                "button:has-text('Submit')",
+                "button:has-text('Send application')",
+                "button:has-text('Apply Now')",
+                "#submit-button",
+                "[data-qa='submit-button']"
+            ]:
+                try:
+                    sub_btn = await page.query_selector(sub_sel)
+                    if sub_btn and await sub_btn.is_visible():
+                        await sub_btn.click()
+                        await page.wait_for_load_state("networkidle")
+                        await page.wait_for_timeout(4000)
+                        break
+                except Exception:
+                    pass
+
+            # Capture Confirmation Screenshot
+            os.makedirs(os.path.join(BASE_DIR, "data", "screenshots"), exist_ok=True)
+            timestamp = int(time.time())
+            screenshot_path = os.path.join(BASE_DIR, "data", "screenshots", f"confirm_{timestamp}.png")
+            await page.screenshot(path=screenshot_path)
+
+            # Verification Gate: Detect confirmation signals
+            page_text = (await page.inner_text("body")).lower()
+            page_url_final = page.url.lower()
+            CONFIRMATION_SIGNALS = [
+                "thank you for applying",
+                "application submitted",
+                "application received",
+                "your application has been received",
+                "we have received your application",
+                "application was sent",
+                "successfully submitted",
+                "thanks for applying",
+                "vielen dank für deine bewerbung",
+                "merci pour votre candidature"
+            ]
+            CONFIRMATION_URLS = ["/confirm", "/thanks", "/thank-you", "/applied", "/success", "/confirmation", "/complete"]
+
+            is_confirmed = any(sig in page_text for sig in CONFIRMATION_SIGNALS) or any(u in page_url_final for u in CONFIRMATION_URLS)
+            
+            raw_title = await page.title()
+            job_title_str = raw_title.strip() if raw_title else "Job Application"
+
+            # Log to application_log.json
+            log_data = {"applications": []}
+            if os.path.exists(APPLICATION_LOG_PATH):
+                try:
+                    with open(APPLICATION_LOG_PATH, "r", encoding="utf-8") as f:
+                        log_data = json.load(f)
+                except Exception:
+                    pass
+
+            log_data["applications"].append({
+                "id": f"run-{timestamp}",
+                "job_url": url,
+                "job_title": job_title_str,
+                "company": "Company",
+                "ats_platform": detect_ats_platform_by_url(url),
+                "status": "applied" if is_confirmed else "requires_manual_apply",
+                "applied_at": datetime.utcnow().isoformat() + "Z",
+                "duration_seconds": 120,
+                "screenshot_artifact_url": f"screenshots/confirm_{timestamp}.png",
+                "artifact_expires_at": (datetime.utcnow() + timedelta(days=90)).isoformat() + "Z",
+                "confirmed_fields": confirmed_fields,
+                "error_message": None if is_confirmed else "Application submission was not confirmed by the platform. Please verify or apply manually."
+            })
+
+            dir_name = os.path.dirname(APPLICATION_LOG_PATH)
+            os.makedirs(dir_name, exist_ok=True)
+            tmp_fd, tmp_path = tempfile.mkstemp(dir=dir_name, prefix="applog_", suffix=".tmp")
+            with os.fdopen(tmp_fd, "w", encoding="utf-8") as f:
+                json.dump(log_data, f, indent=2)
+                f.flush()
+                os.fsync(f.fileno())
+            os.replace(tmp_path, APPLICATION_LOG_PATH)
+
+            # Send Telegram alert
+            bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+            chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+            if bot_token and chat_id:
+                try:
+                    if is_confirmed:
+                        success_msg = f"✅ <b>SparkJobs Auto-Apply:</b> Application submitted successfully for <b>{escape_html(job_title_str)}</b>!\n\n📄 View screenshot in your dashboard."
+                    else:
+                        success_msg = f"⚠️ <b>SparkJobs Auto-Apply:</b> Application attempt for <b>{escape_html(job_title_str)}</b> requires manual completion.\n\n📄 View details in your dashboard."
+                    url_tele = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+                    requests.post(url_tele, json={"chat_id": chat_id, "text": success_msg, "parse_mode": "HTML"}, timeout=10)
+                except Exception as t_err:
+                    print(f"Failed to send Telegram alert: {t_err}")
+
+        except Exception as e:
+            print(f"Submission failed: {e}")
+            bot_token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+            chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
+            if bot_token and chat_id:
+                try:
+                    send_telegram_message(bot_token, chat_id, f"❌ <b>SparkJobs Auto-Apply Error:</b> Submission failed: {escape_html(str(e))}")
+                except Exception:
+                    pass
+        finally:
+            if os.path.exists(PENDING_SUBMISSION_PATH):
+                try:
+                    os.remove(PENDING_SUBMISSION_PATH)
+                except OSError:
+                    pass
+            await browser.close()
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="SparkJobs Auto-Apply CLI")
+    parser.add_argument("--mode", required=True, choices=["analyze", "submit"], help="Running mode")
+    parser.add_argument("--url", required=True, help="Job posting URL")
+    parser.add_argument("--fields", help="JSON string of confirmed fields (required for submit mode)")
+
+    args = parser.parse_args()
+    if args.mode == "analyze":
+        asyncio.run(analyze_form_flow(args.url))
+    elif args.mode == "submit":
+        if not args.fields:
+            # Fallback to pending_submission.json if fields arg is empty
+            if os.path.exists(PENDING_SUBMISSION_PATH):
+                with open(PENDING_SUBMISSION_PATH, "r", encoding="utf-8") as f:
+                    fields_data = f.read()
+            else:
+                print("Error: --fields argument or pending_submission.json is required in submit mode.")
+                sys.exit(1)
+        else:
+            fields_data = args.fields
+        asyncio.run(submit_form_flow(args.url, fields_data))

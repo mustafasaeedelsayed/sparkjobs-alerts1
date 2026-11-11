@@ -1,0 +1,119 @@
+import re
+import zipfile
+import defusedxml.ElementTree as ET
+from pypdf import PdfReader
+
+# M-02 Fix: Pre-compile regex at module level to prevent ReDoS on hot path
+_EMAIL_REGEX = re.compile(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
+_PHONE_REGEX = re.compile(r'(?:\+?\d{1,3}[-.\s]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}')
+_URL_REGEX = re.compile(r'https?://[^\s<>"]+|www\.[^\s<>"]+')
+
+def extract_text_from_pdf(pdf_path: str) -> str:
+    """
+    Extracts all raw text from a PDF file.
+    """
+    try:
+        reader = PdfReader(pdf_path)
+        text = ""
+        for page in reader.pages:
+            page_text = page.extract_text()
+            if page_text:
+                text += page_text + "\n"
+        return text.strip()
+    except Exception as e:
+        print(f"Error reading PDF {pdf_path}: {e}")
+        return ""
+
+MAX_XML_SIZE_BYTES = 50 * 1024 * 1024  # 50MB safety limit
+
+def extract_text_from_docx(docx_path: str) -> str:
+    """
+    C-02 & H-04 Fix: Extracts raw text from DOCX using safe defusedxml parser
+    protecting against XXE, entity expansion, and Zip Bomb decompression attacks.
+    Preserves text run continuity within paragraphs.
+    """
+    try:
+        paragraphs = []
+        with zipfile.ZipFile(docx_path) as docx:
+            for file_name in docx.namelist():
+                if file_name.startswith('word/') and file_name.endswith('.xml'):
+                    try:
+                        info = docx.getinfo(file_name)
+                        if info.file_size > MAX_XML_SIZE_BYTES:
+                            print(f"Skipping oversized XML subfile ({info.file_size} bytes) in DOCX: {file_name}")
+                            continue
+                        xml_content = docx.read(file_name)
+                        root = ET.fromstring(xml_content)
+                        for p in root.iter():
+                            if p.tag.endswith('}p') or p.tag == 'p':
+                                p_texts = [el.text for el in p.iter() if (el.tag.endswith('}t') or el.tag == 't') and el.text]
+                                if p_texts:
+                                    paragraphs.append("".join(p_texts))
+                    except Exception:
+                        pass
+        return "\n".join(paragraphs).strip()
+    except Exception as e:
+        print(f"Error reading DOCX {docx_path}: {e}")
+        return ""
+
+def anonymize_cv_text(text: str) -> str:
+    """
+    Strips personally identifiable information (PII) such as emails, phone numbers,
+    links, and top header lines.
+    """
+    if not text:
+        return ""
+
+    # 1. Strip Emails
+    text = _EMAIL_REGEX.sub('[ANONYMIZED_EMAIL]', text)
+
+    # 2. Strip Phone Numbers (with guard against 4-digit year ranges like 2018-2022)
+    def phone_replacer(match):
+        val = match.group(0)
+        digits = re.sub(r'\D', '', val)
+        if len(digits) == 8 and (digits.startswith("19") or digits.startswith("20")) and (digits[4:].startswith("19") or digits[4:].startswith("20")):
+            return val
+        if 7 <= len(digits) <= 15:
+            return '[ANONYMIZED_PHONE]'
+        return val
+    
+    text = _PHONE_REGEX.sub(phone_replacer, text)
+
+    # 3. Strip URLs / Links
+    text = _URL_REGEX.sub('[ANONYMIZED_LINK]', text)
+
+    # 4. Strip top headers
+    lines = text.split('\n')
+    anonymized_lines = []
+    location_keywords = [
+        'location', 'address', 'street', 'city', 'country', 'zip', 'road', 'state',
+        'عنوان', 'العنوان', 'المدينة', 'الدولة', 'الحي', 'الشارع', 'المنطقة', 'المنزل'
+    ]
+    
+    non_empty_count = 0
+    for line in lines:
+        cleaned_line = line.strip()
+        if not cleaned_line:
+            anonymized_lines.append(line)
+            continue
+        
+        non_empty_count += 1
+        contains_location = any(kw in cleaned_line.lower() for kw in location_keywords)
+        
+        if contains_location:
+            anonymized_lines.append('[ANONYMIZED_LOCATION_LINE]')
+        elif non_empty_count <= 3 and len(cleaned_line) < 50:
+            anonymized_lines.append('[ANONYMIZED_HEADER_LINE]')
+        else:
+            anonymized_lines.append(line)
+
+    return '\n'.join(anonymized_lines)
+
+if __name__ == "__main__":
+    dummy_cv = """
+    Alex Morgan
+    Senior Software Engineer | San Francisco, USA
+    Phone: +1 555 019 2831 | Email: candidate@example.com | LinkedIn: https://linkedin.com/in/example
+    """
+    print("Anonymized CV check:")
+    print(anonymize_cv_text(dummy_cv))

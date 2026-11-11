@@ -1,0 +1,63 @@
+name: SparkJobs Scanner
+
+on:
+  workflow_dispatch: # Triggered on-demand or by backend cron dispatcher
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10 # Hard safety net: prevents runner hangs or slow scraping from draining billing quota
+    concurrency:
+      group: sparkjobs-scan-${{ github.ref }}
+      cancel-in-progress: true
+    permissions:
+      contents: write # Crucial permission to commit seen_jobs.json back to repo
+      
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install uv (Ultra-Fast Package Manager)
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: "requirements.txt"
+
+      - name: Install Dependencies
+        run: |
+          uv pip install --system -r requirements.txt
+
+      - name: Run Job Scanner
+        run: |
+          cd src
+          python main.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SPARKJOBS_PING_SECRET: ${{ secrets.SPARKJOBS_PING_SECRET }}
+
+      - name: Commit and Push bot state back to repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          for file in data/seen_jobs.json data/status_tracker.json data/jobs_history.json; do
+            if [ -f "$file" ]; then
+              git add "$file"
+            fi
+          done
+          if ! git diff --staged --quiet; then
+            git commit -m "update: bot state $(date +'%Y-%m-%d %H:%M')"
+            for i in 1 2 3; do
+              git pull --rebase origin ${GITHUB_REF_NAME:-master} && git push origin HEAD:${GITHUB_REF_NAME:-master} && break || sleep 2
+            done
+          fi
