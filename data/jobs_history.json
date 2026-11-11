@@ -1473,6 +1473,127 @@
       "match_score": 75,
       "scraped_at": "2026-11-11T20:00:54.332399Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490019480",
+      "title": "Web Designer",
+      "company": "Pavago",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490019480",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T23:00:54.193308Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490021142",
+      "title": "UX Designer, Digital Customer Experience",
+      "company": "Nesco Resource",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490021142",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T23:00:54.193476Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490012505",
+      "title": "Senior User Experience Designer",
+      "company": "HireTalent",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490012505",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T23:00:54.193492Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489045252",
+      "title": "Senior UX Designer / Concepteur UX Senior",
+      "company": "Evolving Web",
+      "location": "Montreal, Quebec, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4489045252",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T23:00:54.193502Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489038408",
+      "title": "UX/UI Designer / Concepteur UI/UX",
+      "company": "Evolving Web",
+      "location": "Montreal, Quebec, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4489038408",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T23:00:54.193511Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487420061",
+      "title": "Junior Designer Brand and Creative",
+      "company": "Westgate Resorts",
+      "location": "Ocoee, FL",
+      "url": "https://www.linkedin.com/jobs/view/4487420061",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T23:00:54.193520Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4483200776",
+      "title": "Senior Experience Designer - Agentic Interaction Design",
+      "company": "UPS",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://www.linkedin.com/jobs/view/4483200776",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T23:00:54.193527Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4476023145",
+      "title": "Web Designer",
+      "company": "TalentPop",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4476023145",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T23:00:54.193535Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489039322",
+      "title": "UX Designer",
+      "company": "CRG",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489039322",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T23:00:54.193542Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490035406",
+      "title": "Senior Designer",
+      "company": "Monks",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490035406",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T23:00:54.193550Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489012099",
+      "title": "Graphic Designer",
+      "company": "Austin Cutlery & Tool",
+      "location": "Georgetown, TX",
+      "url": "https://www.linkedin.com/jobs/view/4489012099",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T23:00:54.193558Z",
+      "ats_platform": "custom"
     }
   ]
 }
