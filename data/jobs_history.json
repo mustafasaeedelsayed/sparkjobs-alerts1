@@ -1253,6 +1253,17 @@
       "match_score": 100,
       "scraped_at": "2026-11-11T17:31:10.463276Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489974611",
+      "title": "UX/UI Designer - AI-Powered",
+      "company": "J. Safra Sarasin",
+      "location": "Geneva, Geneva, Switzerland",
+      "url": "https://www.linkedin.com/jobs/view/4489974611",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T18:01:28.077059Z",
+      "ats_platform": "custom"
     }
   ]
 }
