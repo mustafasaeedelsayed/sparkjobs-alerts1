@@ -318,6 +318,17 @@
       "match_score": 75,
       "scraped_at": "2026-11-11T04:30:45.252905Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488638730",
+      "title": "Graphic & Digital Designer",
+      "company": "Dy-Mark",
+      "location": "Darra, Queensland, Australia",
+      "url": "https://www.linkedin.com/jobs/view/4488638730",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T05:00:42.708776Z",
+      "ats_platform": "custom"
     }
   ]
 }
