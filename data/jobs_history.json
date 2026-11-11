@@ -593,6 +593,50 @@
       "match_score": 75,
       "scraped_at": "2026-11-11T07:30:50.482964Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489911518",
+      "title": "UX Designer, Sr.",
+      "company": "Torentify",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489911518",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T08:00:46.960249Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487886867",
+      "title": "UX/UI Designer / Graphics Designer",
+      "company": "Electrical Engineering Algeria",
+      "location": "Dubai, United Arab Emirates",
+      "url": "https://www.linkedin.com/jobs/view/4487886867",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T08:00:46.960280Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488203208",
+      "title": "UX/UI Designer/Graphic Designer",
+      "company": "Corps des jeunes contre le paludisme et les maladies tropicales n\u00e9glig\u00e9es du Togo",
+      "location": "Abu Dhabi Emirate, United Arab Emirates",
+      "url": "https://www.linkedin.com/jobs/view/4488203208",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T08:00:46.960290Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489917368",
+      "title": "UI/UX Designer (Remote)",
+      "company": "Torentify",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489917368",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T08:00:46.960297Z",
+      "ats_platform": "custom"
     }
   ]
 }
