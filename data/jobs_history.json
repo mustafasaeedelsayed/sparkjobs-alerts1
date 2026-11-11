@@ -527,6 +527,72 @@
       "match_score": 60,
       "scraped_at": "2026-11-11T07:01:02.465266Z",
       "ats_platform": "workday"
+    },
+    {
+      "id": "li-4488200264",
+      "title": "UX/UI Designer (Web & Landing Pages)",
+      "company": "Apex",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488200264",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T07:30:50.482902Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489912566",
+      "title": "UI/UX Designer",
+      "company": "Nagarro",
+      "location": "Tokyo, Japan",
+      "url": "https://www.linkedin.com/jobs/view/4489912566",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T07:30:50.482937Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487893524",
+      "title": "Junior Graphic Designer \u2014 AI & Emerging Media",
+      "company": "Confidential",
+      "location": "Abu Dhabi Emirate, United Arab Emirates",
+      "url": "https://www.linkedin.com/jobs/view/4487893524",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T07:30:50.482945Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489917323",
+      "title": "Principal UX Designer /Head of Product Design",
+      "company": "Association des Jeunes Juristes, Diplomates et Politistes du B\u00e9nin",
+      "location": "Abu Dhabi Emirate, United Arab Emirates",
+      "url": "https://www.linkedin.com/jobs/view/4489917323",
+      "source": "Linkedin",
+      "match_score": 40,
+      "scraped_at": "2026-11-11T07:30:50.482952Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4484000357",
+      "title": "Senior Product UI/UX Designer",
+      "company": "HappyGlobal Service",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4484000357",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T07:30:50.482958Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4478855111",
+      "title": "International Visual Designer",
+      "company": "bilibili Group",
+      "location": "Singapore, Singapore",
+      "url": "https://www.linkedin.com/jobs/view/4478855111",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T07:30:50.482964Z",
+      "ats_platform": "custom"
     }
   ]
 }
