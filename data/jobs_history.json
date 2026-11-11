@@ -1,15 +1,92 @@
 {
   "jobs": [
     {
-      "id": "jobspy-scan-test-1",
-      "title": "Senior React Developer",
-      "company": "Acme Corp",
+      "id": "li-4488634239",
+      "title": "Senior UI/UX Designer - NM - Fridley, MN (Onsite)",
+      "company": "Medtronic",
+      "location": "Fridley, MN",
+      "url": "https://www.linkedin.com/jobs/view/4488634239",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T00:30:56.469719Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487697586",
+      "title": "UI/UX Designer",
+      "company": "Superworq",
       "location": "Remote",
-      "url": "https://boards.greenhouse.io/acme/jobs/999",
-      "source": "Google Jobs",
-      "match_score": 100,
-      "scraped_at": "2026-08-30T13:37:37.761139Z",
-      "ats_platform": "greenhouse"
+      "url": "https://www.linkedin.com/jobs/view/4487697586",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T00:30:56.469751Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487852061",
+      "title": "Staff UX Designer",
+      "company": "SecurityScorecard",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4487852061",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-11T00:30:56.469763Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487827785",
+      "title": "UI/UX Designer",
+      "company": "NEO Finance",
+      "location": "Vilnius, Vilniaus, Lithuania",
+      "url": "https://www.linkedin.com/jobs/view/4487827785",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T00:30:56.469772Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488634122",
+      "title": "Designer",
+      "company": "Monks",
+      "location": "Mexico City, Mexico",
+      "url": "https://www.linkedin.com/jobs/view/4488634122",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T00:30:56.469781Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487913374",
+      "title": "Service Designer Digitale Transformation Public Sector (w/m/d)",
+      "company": "PwC Deutschland",
+      "location": "Hamburg, Hamburg, Germany",
+      "url": "https://www.linkedin.com/jobs/view/4487913374",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T00:30:56.469790Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487849060",
+      "title": "Staff UX Designer",
+      "company": "SecurityScorecard",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4487849060",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T00:30:56.469798Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488357799",
+      "title": "UI/UX Designer",
+      "company": "Wiraa",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488357799",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T00:30:56.469807Z",
+      "ats_platform": "custom"
     }
   ]
 }
