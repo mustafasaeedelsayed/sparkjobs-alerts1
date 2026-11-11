@@ -1,2 +1,0 @@
-[DEFAULT CV PLACEHOLDER]
-Please upload your resume (.pdf or .docx) via the SparkGen Admin Dashboard settings to enable AI match scoring.
