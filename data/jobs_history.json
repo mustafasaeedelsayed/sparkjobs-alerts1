@@ -1198,6 +1198,61 @@
       "match_score": 75,
       "scraped_at": "2026-11-11T16:32:19.144083Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489014236",
+      "title": "Senior Product UI/UX Designer",
+      "company": "Neo Media Group Ltd",
+      "location": "Noida, Uttar Pradesh, India",
+      "url": "https://www.linkedin.com/jobs/view/4489014236",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T17:31:10.463225Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4473510004",
+      "title": "UX/UI designer with Finnish or Norwegian",
+      "company": "Software Mind",
+      "location": "Cracow, Ma\u0142opolskie, Poland",
+      "url": "https://www.linkedin.com/jobs/view/4473510004",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T17:31:10.463255Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489454185",
+      "title": "UX/UI Designer (w/m/x)",
+      "company": "Douglas",
+      "location": "D\u00fcsseldorf, North Rhine-Westphalia, Germany",
+      "url": "https://www.linkedin.com/jobs/view/4489454185",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T17:31:10.463263Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488234499",
+      "title": "Web Designer",
+      "company": "Swedbank Estonia",
+      "location": "Tallinn, Harjumaa, Estonia",
+      "url": "https://www.linkedin.com/jobs/view/4488234499",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T17:31:10.463269Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488238415",
+      "title": "Senior UI/UX Designer",
+      "company": "Amusnet",
+      "location": "Sofia, Sofia City, Bulgaria",
+      "url": "https://www.linkedin.com/jobs/view/4488238415",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T17:31:10.463276Z",
+      "ats_platform": "custom"
     }
   ]
 }
