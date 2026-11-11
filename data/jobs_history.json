@@ -274,6 +274,50 @@
       "match_score": 75,
       "scraped_at": "2026-11-11T04:00:47.671061Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488641718",
+      "title": "UX / UI Designer",
+      "company": "Conversion Kings",
+      "location": "Brisbane, Queensland, Australia",
+      "url": "https://www.linkedin.com/jobs/view/4488641718",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T04:30:45.252773Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487885336",
+      "title": "UI/UX Designer (5 years)",
+      "company": "MarsDevs",
+      "location": "Pune District, Maharashtra, India",
+      "url": "https://www.linkedin.com/jobs/view/4487885336",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T04:30:45.252851Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487153483",
+      "title": "Product UX Designer",
+      "company": "Duruper",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.linkedin.com/jobs/view/4487153483",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T04:30:45.252864Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488632990",
+      "title": "Senior Designer",
+      "company": "Palmspire Technologies",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488632990",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T04:30:45.252905Z",
+      "ats_platform": "custom"
     }
   ]
 }
