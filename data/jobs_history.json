@@ -329,6 +329,105 @@
       "match_score": 75,
       "scraped_at": "2026-11-11T05:00:42.708776Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489697556",
+      "title": "Senior UI/UX Designer",
+      "company": "Amentum",
+      "location": "Arlington, VA",
+      "url": "https://www.linkedin.com/jobs/view/4489697556",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T05:30:43.647589Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489902362",
+      "title": "Lead User Experience Designer",
+      "company": "athenahealth",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/4489902362",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-11T05:30:43.647621Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488648765",
+      "title": "User Experience Designer",
+      "company": "FortyV - Creative Technology Studio",
+      "location": "Coimbatore, Tamil Nadu, India",
+      "url": "https://www.linkedin.com/jobs/view/4488648765",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T05:30:43.647631Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489902433",
+      "title": "Senior UI/UX Designer",
+      "company": "Amentum",
+      "location": "Merrifield, VA",
+      "url": "https://www.linkedin.com/jobs/view/4489902433",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T05:30:43.647639Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489688783",
+      "title": "Principal User Experience Designer",
+      "company": "athenahealth",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/4489688783",
+      "source": "Linkedin",
+      "match_score": 40,
+      "scraped_at": "2026-11-11T05:30:43.647647Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489683883",
+      "title": "UX Designer TL1 - 1585",
+      "company": "Kaluza",
+      "location": "Bristol, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4489683883",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T05:30:43.647658Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488635932",
+      "title": "Multimedia Designer",
+      "company": "Sayo AI Limited",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488635932",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-11T05:30:43.647667Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488658330",
+      "title": "Graphic Designer",
+      "company": "Magnetyz",
+      "location": "Bangalore Urban, Karnataka, India",
+      "url": "https://www.linkedin.com/jobs/view/4488658330",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T05:30:43.647674Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489698536",
+      "title": "UX Designer TL1 - 1585",
+      "company": "Kaluza",
+      "location": "London, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4489698536",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T05:30:43.647683Z",
+      "ats_platform": "custom"
     }
   ]
 }
