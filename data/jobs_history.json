@@ -1462,6 +1462,17 @@
       "match_score": 85,
       "scraped_at": "2026-11-11T19:31:01.314436Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489036238",
+      "title": "Senior User Experience Designer",
+      "company": "Skill",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489036238",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T20:00:54.332399Z",
+      "ats_platform": "custom"
     }
   ]
 }
