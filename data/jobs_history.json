@@ -923,6 +923,61 @@
       "match_score": 65,
       "scraped_at": "2026-11-11T13:00:46.937132Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489945426",
+      "title": "UI/UX Designer",
+      "company": "Capgemini Engineering",
+      "location": "Casablanca, Casablanca-Settat, Morocco",
+      "url": "https://www.linkedin.com/jobs/view/4489945426",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T13:31:27.671768Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4478995546",
+      "title": "Senior Interaction Designer",
+      "company": "Netcompany",
+      "location": "London, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4478995546",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T13:31:27.671927Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488693437",
+      "title": "Senior UI/UX Designer",
+      "company": "Western Union",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/4488693437",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-11T13:31:27.671940Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489005073",
+      "title": "UI/UX Designer (Remote)",
+      "company": "Wiraa",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489005073",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-11T13:31:27.671950Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489949068",
+      "title": "Senior UX Designer",
+      "company": "Synmatch AI",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489949068",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-11T13:31:27.671958Z",
+      "ats_platform": "custom"
     }
   ]
 }
