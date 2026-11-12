@@ -1891,6 +1891,50 @@
       "match_score": 75,
       "scraped_at": "2026-11-12T04:30:52.873891Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490038747",
+      "title": "UI/UX Designer",
+      "company": "MedVirtual",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490038747",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T05:00:43.818695Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490076750",
+      "title": "UX Designer",
+      "company": "Blue Arc Welds ME",
+      "location": "Cairo, Egypt",
+      "url": "https://www.linkedin.com/jobs/view/4490076750",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T05:00:43.818730Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490073974",
+      "title": "Senior UX Designer, Consumer (m/f/d)",
+      "company": "Riverty",
+      "location": "Berlin, Germany",
+      "url": "https://www.linkedin.com/jobs/view/4490073974",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T05:00:43.818737Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489061843",
+      "title": "AI interaction designer",
+      "company": "Infosys",
+      "location": "Bengaluru East, Karnataka, India",
+      "url": "https://www.linkedin.com/jobs/view/4489061843",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T05:00:43.818750Z",
+      "ats_platform": "custom"
     }
   ]
 }
