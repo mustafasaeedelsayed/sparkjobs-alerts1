@@ -1814,6 +1814,39 @@
       "match_score": 45,
       "scraped_at": "2026-11-12T03:00:40.451408Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4478768308",
+      "title": "Creative Graphics Designer - Creative Design",
+      "company": "Three Across",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4478768308",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T04:00:40.854098Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489058598",
+      "title": "UI/UX Designer",
+      "company": "Savvy Signature",
+      "location": "Gurugram, Haryana, India",
+      "url": "https://www.linkedin.com/jobs/view/4489058598",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T04:00:40.854130Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490074560",
+      "title": "Game UI Designer",
+      "company": "Good Luck Studio",
+      "location": "Bucharest, Romania",
+      "url": "https://www.linkedin.com/jobs/view/4490074560",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-12T04:00:40.854139Z",
+      "ats_platform": "custom"
     }
   ]
 }
