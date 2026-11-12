@@ -2969,6 +2969,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T23:00:37.588004Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487172713",
+      "title": "Senior Agent Designer",
+      "company": "Topline Pro",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/4487172713",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T23:30:59.292533Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488589022",
+      "title": "Web Designer",
+      "company": "Creative Circle",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488589022",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-12T23:30:59.292584Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490531788",
+      "title": "UX Designer",
+      "company": "BALIN TECHNOLOGIES",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/4490531788",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T23:30:59.292593Z",
+      "ats_platform": "custom"
     }
   ]
 }
