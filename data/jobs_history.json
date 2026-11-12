@@ -2661,6 +2661,61 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T17:01:34.376824Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489259808",
+      "title": "UX/UI Designer",
+      "company": "Yochana",
+      "location": "Toronto, Ontario, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4489259808",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T18:30:48.485050Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488544254",
+      "title": "UI/UX & Front-End Designer",
+      "company": "Prima Systems",
+      "location": "Lahore, Punjab, Pakistan",
+      "url": "https://www.linkedin.com/jobs/view/4488544254",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-12T18:30:48.485084Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490374660",
+      "title": "UX Designer - Figma - H\u00edbrido - Maresme",
+      "company": "BETWEEN Group",
+      "location": "Ma\u00e7anet de la Selva, Catalonia, Spain",
+      "url": "https://www.linkedin.com/jobs/view/4490374660",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T18:30:48.485093Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490385084",
+      "title": "Senior UX/UI Designer",
+      "company": "Aubay Portugal",
+      "location": "Braga, Portugal",
+      "url": "https://www.linkedin.com/jobs/view/4490385084",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T18:30:48.485100Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490372669",
+      "title": "UX Designer",
+      "company": "PMG GLOBAL",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/4490372669",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T18:30:48.485107Z",
+      "ats_platform": "custom"
     }
   ]
 }
