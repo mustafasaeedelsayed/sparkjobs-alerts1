@@ -2584,6 +2584,28 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T15:02:07.572798Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4482454828",
+      "title": "UX Designer",
+      "company": "North",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4482454828",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-12T16:01:01.559401Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4454215095",
+      "title": "Senior/UX designer (LifeSG)",
+      "company": "GovTech Singapore",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4454215095",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T16:01:01.559516Z",
+      "ats_platform": "custom"
     }
   ]
 }
