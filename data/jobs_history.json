@@ -2144,6 +2144,83 @@
       "match_score": 65,
       "scraped_at": "2026-11-12T09:00:33.224722Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489081913",
+      "title": "UXUI Designer (5yoe)",
+      "company": "DatVietVAC Group Holdings",
+      "location": "Qu\u1eadn 3, Ho Chi Minh City, Vietnam",
+      "url": "https://www.linkedin.com/jobs/view/4489081913",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T09:30:42.301889Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490316190",
+      "title": "Interaction Designer",
+      "company": "Harvey Nash",
+      "location": "Edinburgh, Scotland, UK",
+      "url": "https://www.linkedin.com/jobs/view/4490316190",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T09:30:42.302098Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489086454",
+      "title": "UI/UX Designer",
+      "company": "Grade Capital",
+      "location": "Gurugram, Haryana, India",
+      "url": "https://www.linkedin.com/jobs/view/4489086454",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T09:30:42.302111Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488288931",
+      "title": "UX Designer (SC Cleared)",
+      "company": "Accenture",
+      "location": "England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4488288931",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T09:30:42.302121Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488298493",
+      "title": "UX/UI Designer (m/w/d)",
+      "company": "bettermarks GmbH",
+      "location": "Berlin, Berlin, Germany",
+      "url": "https://www.linkedin.com/jobs/view/4488298493",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T09:30:42.302131Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4442856481",
+      "title": "Senior UI Designer",
+      "company": "LivaNova",
+      "location": "Charlotte, NC",
+      "url": "https://www.linkedin.com/jobs/view/4442856481",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T09:30:42.302139Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488296489",
+      "title": "Web Designer (Webflow & No-Code)",
+      "company": "Creative Corner Studio - Full-Service Webflow Agency",
+      "location": "Sofia, Sofia City, Bulgaria",
+      "url": "https://www.linkedin.com/jobs/view/4488296489",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T09:30:42.302149Z",
+      "ats_platform": "custom"
     }
   ]
 }
