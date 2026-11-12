@@ -2221,6 +2221,61 @@
       "match_score": 65,
       "scraped_at": "2026-11-12T09:30:42.302149Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4472370625",
+      "title": "Visual Designer II",
+      "company": "Affirm",
+      "location": "Victoria, British Columbia, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4472370625",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T10:30:51.055879Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4464651983",
+      "title": "Web Production Designer, Global Design Production",
+      "company": "Salesforce",
+      "location": "Mexico City, Mexico",
+      "url": "https://www.linkedin.com/jobs/view/4464651983",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T10:30:51.055937Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4483432478",
+      "title": "User Experience Designer - Mid & Senior",
+      "company": "Stealth iT Consulting",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4483432478",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T10:30:51.055952Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488506317",
+      "title": "Senior UX/UI Designer",
+      "company": "Tenarai Europe",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488506317",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T10:30:51.055963Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4472379280",
+      "title": "Visual Designer II",
+      "company": "Affirm",
+      "location": "Calgary, Alberta, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4472379280",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T10:30:51.055971Z",
+      "ats_platform": "custom"
     }
   ]
 }
