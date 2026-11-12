@@ -2881,6 +2881,61 @@
       "match_score": 65,
       "scraped_at": "2026-11-12T21:30:44.727927Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490534118",
+      "title": "Jr Digital Graphic Designer",
+      "company": "Helios & Partners",
+      "location": "Singapore, Singapore",
+      "url": "https://www.linkedin.com/jobs/view/4490534118",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T22:30:49.499465Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490514801",
+      "title": "UI/UX Designer",
+      "company": "CodeBitsFlow Software Solutions",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490514801",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T22:30:49.499500Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4476030845",
+      "title": "Lead Experience Designer",
+      "company": "SSi People",
+      "location": "Pittsburgh, PA",
+      "url": "https://www.linkedin.com/jobs/view/4476030845",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T22:30:49.499509Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489299674",
+      "title": "Senior Digital Brand Designer, Harry's",
+      "company": "Harry's",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/4489299674",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T22:30:49.499517Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490509849",
+      "title": "DTC UI Designer (Contract)",
+      "company": "LaSalle Intelligent Solutions",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/4490509849",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T22:30:49.499523Z",
+      "ats_platform": "custom"
     }
   ]
 }
