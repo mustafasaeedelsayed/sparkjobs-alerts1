@@ -2474,6 +2474,39 @@
       "match_score": 75,
       "scraped_at": "2026-11-12T13:30:50.264821Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489227866",
+      "title": "UI/UX DESIGNER - (Figma MUST)",
+      "company": "MG",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489227866",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T14:31:06.991635Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4455914674",
+      "title": "Sr. UX Designer, North American Stores Design",
+      "company": "Amazon",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/4455914674",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T14:31:06.991734Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4482094096",
+      "title": "Senior UX Designer",
+      "company": "Automation Anywhere",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.linkedin.com/jobs/view/4482094096",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T14:31:06.991747Z",
+      "ats_platform": "custom"
     }
   ]
 }
