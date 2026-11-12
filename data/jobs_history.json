@@ -2276,6 +2276,50 @@
       "match_score": 75,
       "scraped_at": "2026-11-12T10:30:51.055971Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488506230",
+      "title": "User Experience Designer",
+      "company": "BettingJobs",
+      "location": "London Area, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4488506230",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T11:00:48.784746Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490324011",
+      "title": "Figma Designer_Kottayam",
+      "company": "VGreen Technology Solutions (VGreenTEK)",
+      "location": "Kottayam, Kerala, India",
+      "url": "https://www.linkedin.com/jobs/view/4490324011",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T11:00:48.784785Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4481142215",
+      "title": "Senior User Experience Designer",
+      "company": "Critical Mass",
+      "location": "London, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4481142215",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T11:00:48.784799Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489207037",
+      "title": "UX/UI Designer",
+      "company": "Photon",
+      "location": "Greater London, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4489207037",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T11:00:48.784807Z",
+      "ats_platform": "custom"
     }
   ]
 }
