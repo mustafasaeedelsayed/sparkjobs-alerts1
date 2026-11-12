@@ -1935,6 +1935,28 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T05:00:43.818750Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488173580",
+      "title": "Digital Designer (Beauty)",
+      "company": "24 Seven Talent",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/4488173580",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T05:30:49.303436Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488287060",
+      "title": "UI/UX Designer",
+      "company": "TaskVerse",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488287060",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T05:30:49.303550Z",
+      "ats_platform": "custom"
     }
   ]
 }
