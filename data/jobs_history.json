@@ -2936,6 +2936,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T22:30:49.499523Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489281966",
+      "title": "Lead UI Designer \u2013 Automotive & In-Vehicle HMI (m/f/d)",
+      "company": "Edenspiekermann",
+      "location": "Stockholm, Stockholm County, Sweden",
+      "url": "https://www.linkedin.com/jobs/view/4489281966",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T23:00:37.587883Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490518564",
+      "title": "UX Designer",
+      "company": "Motorola Solutions",
+      "location": "Edinburgh, Scotland, UK",
+      "url": "https://www.linkedin.com/jobs/view/4490518564",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T23:00:37.587990Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490536115",
+      "title": "UI/UX Designer",
+      "company": "Booz Allen Hamilton",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/4490536115",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T23:00:37.588004Z",
+      "ats_platform": "custom"
     }
   ]
 }
