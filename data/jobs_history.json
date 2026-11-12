@@ -2606,6 +2606,61 @@
       "match_score": 75,
       "scraped_at": "2026-11-12T16:01:01.559516Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489274001",
+      "title": "Creative Designer (UI)",
+      "company": "Publicis Global Delivery (PGD)",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489274001",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T17:01:34.376766Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4455426092",
+      "title": "Designer, Ministry of Foreign Affairs (MFA)",
+      "company": "GovTech Singapore",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4455426092",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T17:01:34.376798Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490363554",
+      "title": "Senior User Experience Designer",
+      "company": "Akamai Technologies",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.linkedin.com/jobs/view/4490363554",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T17:01:34.376808Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4482179844",
+      "title": "UX Designer",
+      "company": "Hach",
+      "location": "Loveland, CO",
+      "url": "https://www.linkedin.com/jobs/view/4482179844",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T17:01:34.376816Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490383048",
+      "title": "UX/UI Designer",
+      "company": "ACENSI",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490383048",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T17:01:34.376824Z",
+      "ats_platform": "custom"
     }
   ]
 }
