@@ -2089,6 +2089,50 @@
       "match_score": 45,
       "scraped_at": "2026-11-12T07:30:38.058231Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489078863",
+      "title": "UX Designer",
+      "company": "Get Recruited Worldwide",
+      "location": "London Area, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4489078863",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T08:30:53.496573Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489092536",
+      "title": "UI/UX Designer",
+      "company": "Hyundai Motor Group Innovation Center Singapore (HMGICS)",
+      "location": "Singapore, Singapore",
+      "url": "https://www.linkedin.com/jobs/view/4489092536",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T08:30:53.496599Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488293261",
+      "title": "Senior Brand & UI/UX Designer / Creative Lead",
+      "company": "Smart Prop Firm",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488293261",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T08:30:53.496612Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489098406",
+      "title": "AI Designer",
+      "company": "The Matic Studio",
+      "location": "Noida, Uttar Pradesh, India",
+      "url": "https://www.linkedin.com/jobs/view/4489098406",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T08:30:53.496622Z",
+      "ats_platform": "custom"
     }
   ]
 }
