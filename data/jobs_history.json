@@ -1847,6 +1847,50 @@
       "match_score": 45,
       "scraped_at": "2026-11-12T04:00:40.854139Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489665394",
+      "title": "Digital Designer",
+      "company": "FOURDIGIT MALAYSIA",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489665394",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T04:30:52.873840Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488269721",
+      "title": "UI/UX Designer",
+      "company": "Jobgether",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488269721",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T04:30:52.873873Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490082423",
+      "title": "Portrait Effects Designer",
+      "company": "Meitu Inc.",
+      "location": "Shanghai, Shanghai, China",
+      "url": "https://www.linkedin.com/jobs/view/4490082423",
+      "source": "Linkedin",
+      "match_score": 40,
+      "scraped_at": "2026-11-12T04:30:52.873883Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489061670",
+      "title": "Senior User Experience Designer",
+      "company": "Delta Electronics Southeast Asia & Oceania",
+      "location": "Samut Prakan, Thailand",
+      "url": "https://www.linkedin.com/jobs/view/4489061670",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T04:30:52.873891Z",
+      "ats_platform": "custom"
     }
   ]
 }
