@@ -2771,6 +2771,17 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T19:30:59.967659Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490389674",
+      "title": "Senior UX Designer II",
+      "company": "Verisk",
+      "location": "Lehi, UT",
+      "url": "https://www.linkedin.com/jobs/view/4490389674",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-12T20:00:42.877153Z",
+      "ats_platform": "custom"
     }
   ]
 }
