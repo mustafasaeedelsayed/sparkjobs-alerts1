@@ -2507,6 +2507,83 @@
       "match_score": 65,
       "scraped_at": "2026-11-12T14:31:06.991747Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489260005",
+      "title": "UI/UX Designer (Figma/Prototype)",
+      "company": "Krwizard",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489260005",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-12T15:02:07.572733Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490341754",
+      "title": "UX/UI Designer",
+      "company": "Despegar",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490341754",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T15:02:07.572766Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490334944",
+      "title": "Senior UI/UX Designer (\u20ac5000 - \u20ac7000)",
+      "company": "Eitje",
+      "location": "Amsterdam, North Holland, Netherlands",
+      "url": "https://www.linkedin.com/jobs/view/4490334944",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T15:02:07.572774Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4479446234",
+      "title": "Senior UX Designer",
+      "company": "Litera",
+      "location": "Greater Toronto Area, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4479446234",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T15:02:07.572781Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4482151438",
+      "title": "UX Designer",
+      "company": "Arthrex",
+      "location": "Naples, FL",
+      "url": "https://www.linkedin.com/jobs/view/4482151438",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T15:02:07.572786Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4446130693",
+      "title": "Cleared Senior UI/UX Designer",
+      "company": "Accenture Federal Services",
+      "location": "Chantilly, VA",
+      "url": "https://www.linkedin.com/jobs/view/4446130693",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T15:02:07.572792Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489251644",
+      "title": "Web Designer",
+      "company": "Haystack",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489251644",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T15:02:07.572798Z",
+      "ats_platform": "custom"
     }
   ]
 }
