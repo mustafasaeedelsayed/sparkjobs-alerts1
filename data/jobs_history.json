@@ -1660,6 +1660,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T00:01:01.398427Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488265448",
+      "title": "UX Designer II",
+      "company": "Cooperativa Central Ailos",
+      "location": "Blumenau, Santa Catarina, Brazil",
+      "url": "https://www.linkedin.com/jobs/view/4488265448",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T00:31:13.064950Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490059426",
+      "title": "Digital Designer",
+      "company": "Progressive Insurance",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490059426",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T00:31:13.065087Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489048871",
+      "title": "User Experience Designer",
+      "company": "swipejobs",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489048871",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T00:31:13.065102Z",
+      "ats_platform": "custom"
     }
   ]
 }
