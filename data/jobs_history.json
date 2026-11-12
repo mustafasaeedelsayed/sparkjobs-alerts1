@@ -2397,6 +2397,72 @@
       "match_score": 75,
       "scraped_at": "2026-11-12T12:00:51.327045Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4470328721",
+      "title": "UX Designer",
+      "company": "Tata Consultancy Services",
+      "location": "Charlotte, NC",
+      "url": "https://www.linkedin.com/jobs/view/4470328721",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T12:31:34.760695Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490327632",
+      "title": "UI/UX Designer",
+      "company": "The Premier Consultants ( Recruitment Company )",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://www.linkedin.com/jobs/view/4490327632",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T12:31:34.760735Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488517294",
+      "title": "UX/UI Designer",
+      "company": "Ladders",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488517294",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-12T12:31:34.760744Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4476656364",
+      "title": "UI/UX Designer",
+      "company": "Accellor",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://www.linkedin.com/jobs/view/4476656364",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T12:31:34.760752Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488525009",
+      "title": "Principal UI/UX Designer - Analytical Products (Minneapolis preferred, remote eligible)",
+      "company": "Ladders",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488525009",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T12:31:34.760758Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4457173754",
+      "title": "UX Designer",
+      "company": "Tata Consultancy Services",
+      "location": "Jersey City, NJ",
+      "url": "https://www.linkedin.com/jobs/view/4457173754",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T12:31:34.760765Z",
+      "ats_platform": "custom"
     }
   ]
 }
