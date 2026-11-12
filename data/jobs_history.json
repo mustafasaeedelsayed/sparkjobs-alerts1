@@ -1781,6 +1781,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T02:30:35.773661Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490037887",
+      "title": "Multimedia Designer",
+      "company": "Michigan Medicine",
+      "location": "Ann Arbor, MI",
+      "url": "https://www.linkedin.com/jobs/view/4490037887",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T03:00:40.451363Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490072763",
+      "title": "Senior UX-Designer (m/w/d) - befristet als Elternzeitvertretung (in Teilzeit mit mind. 50% m\u00f6glich)",
+      "company": "dental bauer GmbH",
+      "location": "Munich, Bavaria, Germany",
+      "url": "https://www.linkedin.com/jobs/view/4490072763",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T03:00:40.451400Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488276505",
+      "title": "Executive Assistant & Graphic Designer for Management Agency (US-based, Remote)",
+      "company": "Paired",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488276505",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-12T03:00:40.451408Z",
+      "ats_platform": "custom"
     }
   ]
 }
