@@ -1693,6 +1693,50 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T00:31:13.065102Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489990842",
+      "title": "Lead UX/UI Designer",
+      "company": "Apadmi",
+      "location": "Amsterdam, North Holland, Netherlands",
+      "url": "https://www.linkedin.com/jobs/view/4489990842",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T01:00:48.635394Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488277098",
+      "title": "Experience Designer [AQ-26362]",
+      "company": "Aquent",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/4488277098",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T01:00:48.635423Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490050335",
+      "title": "[DinoAI] Senior Designer",
+      "company": "DinoAI Korea",
+      "location": "Seoul, South Korea",
+      "url": "https://www.linkedin.com/jobs/view/4490050335",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T01:00:48.635433Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489065064",
+      "title": "Senior Designer",
+      "company": "FBI TALENT CO.",
+      "location": "Sydney, New South Wales, Australia",
+      "url": "https://www.linkedin.com/jobs/view/4489065064",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T01:00:48.635440Z",
+      "ats_platform": "custom"
     }
   ]
 }
