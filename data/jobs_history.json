@@ -2716,6 +2716,61 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T18:30:48.485107Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488563043",
+      "title": "UX Designer",
+      "company": "BotCity",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488563043",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T19:30:59.967586Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4481301662",
+      "title": "Senior CX/UX Designer",
+      "company": "Wolters Kluwer",
+      "location": "Bitritto, Apulia, Italy",
+      "url": "https://www.linkedin.com/jobs/view/4481301662",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T19:30:59.967622Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488554187",
+      "title": "UI/UX Designer",
+      "company": "MedHeave Asia",
+      "location": "Rawalpindi, Punjab, Pakistan",
+      "url": "https://www.linkedin.com/jobs/view/4488554187",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T19:30:59.967633Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490388752",
+      "title": "Designer - UX",
+      "company": "United Airlines India Knowledge Center",
+      "location": "Gurugram, Haryana, India",
+      "url": "https://www.linkedin.com/jobs/view/4490388752",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T19:30:59.967649Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490501118",
+      "title": "UX/UI/UR Designer",
+      "company": "Smartedge Solutions",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490501118",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T19:30:59.967659Z",
+      "ats_platform": "custom"
     }
   ]
 }
