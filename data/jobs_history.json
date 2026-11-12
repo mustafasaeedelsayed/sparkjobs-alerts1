@@ -2782,6 +2782,61 @@
       "match_score": 100,
       "scraped_at": "2026-11-12T20:00:42.877153Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489299157",
+      "title": "Senior UX Designer - Remote Work",
+      "company": "BairesDev",
+      "location": "Antioquia, Colombia",
+      "url": "https://www.linkedin.com/jobs/view/4489299157",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-12T20:30:49.662203Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489296205",
+      "title": "Senior User Experience Designer (UX Design Consultant)",
+      "company": "InRhythm",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.linkedin.com/jobs/view/4489296205",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T20:30:49.662240Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4446444546",
+      "title": "Senior Experience Designer",
+      "company": "Digitas North America",
+      "location": "Birmingham, MI",
+      "url": "https://www.linkedin.com/jobs/view/4446444546",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-12T20:30:49.662255Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4482175235",
+      "title": "21GRAMS- Experience Designer",
+      "company": "Real Chemistry",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/4482175235",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T20:30:49.662265Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489286467",
+      "title": "Senior UX Designer - Remote Work",
+      "company": "BairesDev",
+      "location": "Minas Gerais, Brazil",
+      "url": "https://www.linkedin.com/jobs/view/4489286467",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T20:30:49.662280Z",
+      "ats_platform": "custom"
     }
   ]
 }
