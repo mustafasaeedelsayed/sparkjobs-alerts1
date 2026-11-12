@@ -1957,6 +1957,61 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T05:30:49.303550Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488280505",
+      "title": "Senior Designer & Design Lead",
+      "company": "Craft Collective",
+      "location": "Strand, Western Cape, South Africa",
+      "url": "https://www.linkedin.com/jobs/view/4488280505",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T06:30:57.751052Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489098053",
+      "title": "Lead UX Designer",
+      "company": "ActAI",
+      "location": "London Area, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4489098053",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-12T06:30:57.751083Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489074760",
+      "title": "Graphic Designer & Digital Marketing Specialist",
+      "company": "Indication Instruments Limited",
+      "location": "Faridabad, Haryana, India",
+      "url": "https://www.linkedin.com/jobs/view/4489074760",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-12T06:30:57.751091Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490092383",
+      "title": "Rakuten Design Lab Art Director / Graphic Designer (Intermediate - Senior) - Marketing Division",
+      "company": "Rakuten",
+      "location": "Tokyo, Tokyo, Japan",
+      "url": "https://www.linkedin.com/jobs/view/4490092383",
+      "source": "Linkedin",
+      "match_score": 55,
+      "scraped_at": "2026-11-12T06:30:57.751096Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489099104",
+      "title": "UX/UI designer",
+      "company": "Bending Spoons",
+      "location": "Madrid, Community of Madrid, Spain",
+      "url": "https://www.linkedin.com/jobs/view/4489099104",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T06:30:57.751101Z",
+      "ats_platform": "custom"
     }
   ]
 }
