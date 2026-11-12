@@ -2012,6 +2012,28 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T06:30:57.751101Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490072905",
+      "title": "OHTL Designer",
+      "company": "AgileGrid Solutions",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490072905",
+      "source": "Linkedin",
+      "match_score": 0,
+      "scraped_at": "2026-11-12T07:01:51.547960Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490092652",
+      "title": "Web Designer",
+      "company": "Infocareer",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://www.linkedin.com/jobs/view/4490092652",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-12T07:01:51.548255Z",
+      "ats_platform": "custom"
     }
   ]
 }
