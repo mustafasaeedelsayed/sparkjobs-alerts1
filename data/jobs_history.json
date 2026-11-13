@@ -3046,6 +3046,17 @@
       "match_score": 75,
       "scraped_at": "2026-11-13T01:00:38.593349Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488582720",
+      "title": "Service Designer",
+      "company": "Steampunk, Inc.",
+      "location": "McLean, VA",
+      "url": "https://www.linkedin.com/jobs/view/4488582720",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T01:31:07.695164Z",
+      "ats_platform": "custom"
     }
   ]
 }
