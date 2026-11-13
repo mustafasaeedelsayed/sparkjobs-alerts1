@@ -3277,6 +3277,39 @@
       "match_score": 75,
       "scraped_at": "2026-11-13T05:00:45.550246Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488587890",
+      "title": "Senior UI/UX Designer",
+      "company": "Tetrad Group",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488587890",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T06:01:11.048237Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489448339",
+      "title": "Senior UX Lead Designer \u2013 Holborn London",
+      "company": "Free-Work UK",
+      "location": "London, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4489448339",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-13T06:01:11.048278Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490566941",
+      "title": "Web Designer",
+      "company": "Netrolynx AI",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490566941",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-13T06:01:11.048288Z",
+      "ats_platform": "custom"
     }
   ]
 }
