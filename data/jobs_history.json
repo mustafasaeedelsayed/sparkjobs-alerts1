@@ -4124,6 +4124,50 @@
       "match_score": 75,
       "scraped_at": "2026-11-13T22:30:46.463111Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490798199",
+      "title": "UX/UI Designer",
+      "company": "KTek Resourcing",
+      "location": "Toronto, Ontario, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4490798199",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T23:00:42.336811Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490779835",
+      "title": "Principal User Experience Designer",
+      "company": "Honeywell Aerospace",
+      "location": "Phoenix, AZ",
+      "url": "https://www.linkedin.com/jobs/view/4490779835",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-13T23:00:42.336848Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488990421",
+      "title": "UX/UI Designer",
+      "company": "Alithya",
+      "location": "Quebec, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4488990421",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T23:00:42.336858Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490777968",
+      "title": "Principal User Experience Designer",
+      "company": "Akamai Technologies",
+      "location": "Cambridge, MA",
+      "url": "https://www.linkedin.com/jobs/view/4490777968",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-13T23:00:42.336866Z",
+      "ats_platform": "custom"
     }
   ]
 }
