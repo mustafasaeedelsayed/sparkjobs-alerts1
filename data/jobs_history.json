@@ -3948,6 +3948,39 @@
       "match_score": 45,
       "scraped_at": "2026-11-13T18:00:53.584905Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489584947",
+      "title": "26-82 Senior UX Designer",
+      "company": "Technical Safety BC",
+      "location": "Vancouver, British Columbia, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4489584947",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T18:30:47.543486Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490770158",
+      "title": "User Experience Designer (SC Eligible) - Consultant / Senior Consultant",
+      "company": "Capgemini Invent",
+      "location": "London Area, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4490770158",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T18:30:47.543572Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489224026",
+      "title": "UX Designer",
+      "company": "Superworq",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489224026",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T18:30:47.543583Z",
+      "ats_platform": "custom"
     }
   ]
 }
