@@ -3860,6 +3860,61 @@
       "match_score": 85,
       "scraped_at": "2026-11-13T17:01:02.975931Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4483017574",
+      "title": "Consultant - User Experience Designer",
+      "company": "Tarka Talent",
+      "location": "England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4483017574",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T17:30:52.613406Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488951445",
+      "title": "UX designer / D\u00e9veloppeur front (IT) / Freelance",
+      "company": "Free-Work",
+      "location": "Paris, \u00cele-de-France, France",
+      "url": "https://www.linkedin.com/jobs/view/4488951445",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-13T17:30:52.613436Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488946529",
+      "title": "User Experience Designer",
+      "company": "HCL Global Systems Inc",
+      "location": "New Hampshire, United States",
+      "url": "https://www.linkedin.com/jobs/view/4488946529",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T17:30:52.613446Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4472852166",
+      "title": "UX/UI Designer (Conversion Optimization)",
+      "company": "LeadVenture\u00ae",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4472852166",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T17:30:52.613453Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490745283",
+      "title": "UX-Designer:in (Websites & Digital Experience)",
+      "company": "UNIQA Insurance Group",
+      "location": "Vienna, Vienna, Austria",
+      "url": "https://www.linkedin.com/jobs/view/4490745283",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T17:30:52.613459Z",
+      "ats_platform": "custom"
     }
   ]
 }
