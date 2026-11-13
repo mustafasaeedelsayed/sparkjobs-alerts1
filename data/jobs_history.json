@@ -3563,6 +3563,17 @@
       "match_score": 100,
       "scraped_at": "2026-11-13T10:00:52.758054Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4473785661",
+      "title": "Senior Web Designer, Growth",
+      "company": "Fin",
+      "location": "London, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4473785661",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-13T10:30:38.923139Z",
+      "ats_platform": "custom"
     }
   ]
 }
