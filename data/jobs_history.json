@@ -3750,6 +3750,17 @@
       "match_score": 85,
       "scraped_at": "2026-11-13T14:01:18.957521Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488938503",
+      "title": "UX/UI Designer:in",
+      "company": "bettermarks GmbH",
+      "location": "Berlin, Germany",
+      "url": "https://www.linkedin.com/jobs/view/4488938503",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-13T14:30:55.300933Z",
+      "ats_platform": "custom"
     }
   ]
 }
