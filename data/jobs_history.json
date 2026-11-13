@@ -3915,6 +3915,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-13T17:30:52.613459Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4477805721",
+      "title": "Senior UX/UI Designer - Online Banking (all genders)",
+      "company": "BNP Paribas",
+      "location": "Munich, Bavaria, Germany",
+      "url": "https://www.linkedin.com/jobs/view/4477805721",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-13T18:00:53.584849Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490753484",
+      "title": "Senior UX Designer - Dublin",
+      "company": "Atrium (EMEA)",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490753484",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-13T18:00:53.584892Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490765092",
+      "title": "Principal Experience Designer",
+      "company": "HP",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/4490765092",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-13T18:00:53.584905Z",
+      "ats_platform": "custom"
     }
   ]
 }
