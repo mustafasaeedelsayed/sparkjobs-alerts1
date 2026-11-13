@@ -3057,6 +3057,39 @@
       "match_score": 75,
       "scraped_at": "2026-11-13T01:31:07.695164Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490567033",
+      "title": "User Experience Designer at Aptiva Corp",
+      "company": "MeeBoss",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490567033",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T02:00:47.854321Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490553564",
+      "title": "UX Designer",
+      "company": "Krom",
+      "location": "Jakarta, Indonesia",
+      "url": "https://www.linkedin.com/jobs/view/4490553564",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T02:00:47.854402Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490562059",
+      "title": "Senior UI/UX Designer",
+      "company": "MeeBoss",
+      "location": "Bellevue, WA",
+      "url": "https://www.linkedin.com/jobs/view/4490562059",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T02:00:47.854413Z",
+      "ats_platform": "custom"
     }
   ]
 }
