@@ -4168,6 +4168,39 @@
       "match_score": 45,
       "scraped_at": "2026-11-13T23:00:42.336866Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490794745",
+      "title": "Principal Designer, Design Systems",
+      "company": "Ibotta",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/4490794745",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-13T23:30:38.328215Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488988601",
+      "title": "Web Designer, Experimentation",
+      "company": "Jobber",
+      "location": "Vancouver, British Columbia, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4488988601",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T23:30:38.328243Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488984763",
+      "title": "Web Designer, Experimentation",
+      "company": "Jobber",
+      "location": "Edmonton, Alberta, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4488984763",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T23:30:38.328253Z",
+      "ats_platform": "custom"
     }
   ]
 }
