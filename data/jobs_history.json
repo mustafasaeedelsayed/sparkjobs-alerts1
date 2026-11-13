@@ -3574,6 +3574,28 @@
       "match_score": 65,
       "scraped_at": "2026-11-13T10:30:38.923139Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490703116",
+      "title": "UI UX Designer",
+      "company": "Think Design Collaborative",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490703116",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T11:00:57.595748Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488901603",
+      "title": "UI/UX Designer",
+      "company": "Katyayani Organics",
+      "location": "Bhopal, Madhya Pradesh, India",
+      "url": "https://www.linkedin.com/jobs/view/4488901603",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T11:00:57.595801Z",
+      "ats_platform": "custom"
     }
   ]
 }
