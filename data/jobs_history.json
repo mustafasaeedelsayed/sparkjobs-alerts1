@@ -3090,6 +3090,94 @@
       "match_score": 75,
       "scraped_at": "2026-11-13T02:00:47.854413Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490563388",
+      "title": "Lead UI/UX Designer, Zalo",
+      "company": "Zalo",
+      "location": "Ho Chi Minh City, Vietnam",
+      "url": "https://www.linkedin.com/jobs/view/4490563388",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T04:00:40.236422Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4487243887",
+      "title": "Senior Product/UX Designer",
+      "company": "Abbott",
+      "location": "Lake Forest, IL",
+      "url": "https://www.linkedin.com/jobs/view/4487243887",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T04:00:40.236457Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488903047",
+      "title": "Digital Solutions UI/UX Designer",
+      "company": "Festo",
+      "location": "Tianjin, Tianjin, China",
+      "url": "https://www.linkedin.com/jobs/view/4488903047",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T04:00:40.236465Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489524435",
+      "title": "User Experience Designer",
+      "company": "fourtitude.asia",
+      "location": "Petaling Jaya, Selangor, Malaysia",
+      "url": "https://www.linkedin.com/jobs/view/4489524435",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T04:00:40.236472Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489506958",
+      "title": "Senior UX Designer",
+      "company": "Supervised",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489506958",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-13T04:00:40.236479Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489508852",
+      "title": "UX/UI Designer",
+      "company": "AMP",
+      "location": "Melbourne, Victoria, Australia",
+      "url": "https://www.linkedin.com/jobs/view/4489508852",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T04:00:40.236485Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4470071640",
+      "title": "UX/UI Designer",
+      "company": "Cheil Singapore",
+      "location": "Singapore, Singapore",
+      "url": "https://www.linkedin.com/jobs/view/4470071640",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T04:00:40.236491Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489524545",
+      "title": "UI/UX Designer (Internship)",
+      "company": "GERCEPin Hyper-Local Services App",
+      "location": "Sukoharjo, Central Java, Indonesia",
+      "url": "https://www.linkedin.com/jobs/view/4489524545",
+      "source": "Linkedin",
+      "match_score": 90,
+      "scraped_at": "2026-11-13T04:00:40.236496Z",
+      "ats_platform": "custom"
     }
   ]
 }
