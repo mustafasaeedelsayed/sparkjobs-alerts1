@@ -3761,6 +3761,72 @@
       "match_score": 100,
       "scraped_at": "2026-11-13T14:30:55.300933Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4403223100",
+      "title": "Senior UX/UI Designers",
+      "company": "EY",
+      "location": "Athens, Attiki, Greece",
+      "url": "https://www.linkedin.com/jobs/view/4403223100",
+      "source": "Linkedin",
+      "match_score": 100,
+      "scraped_at": "2026-11-13T15:30:57.989625Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4403203817",
+      "title": "Senior UX/UI Designers",
+      "company": "EY",
+      "location": "Thessaloniki, Central Macedonia, Greece",
+      "url": "https://www.linkedin.com/jobs/view/4403203817",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T15:30:57.989657Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4420633702",
+      "title": "Senior UX Designer \u2013 Central Technology",
+      "company": "Behaviour Interactive",
+      "location": "Montreal, Quebec, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4420633702",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-13T15:30:57.989666Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489584116",
+      "title": "UI/UX Designer",
+      "company": "PSC Biotech\u00ae Corporation",
+      "location": "Makati, National Capital Region, Philippines",
+      "url": "https://www.linkedin.com/jobs/view/4489584116",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T15:30:57.989673Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488945498",
+      "title": "UI/UX Designer",
+      "company": "247 Labs",
+      "location": "Toronto, Ontario, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4488945498",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T15:30:57.989680Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4456188412",
+      "title": "UX Designer, Elevated Shopping Experience",
+      "company": "Amazon",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/4456188412",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T15:30:57.989686Z",
+      "ats_platform": "custom"
     }
   ]
 }
