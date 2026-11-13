@@ -3673,6 +3673,83 @@
       "match_score": 85,
       "scraped_at": "2026-11-13T13:01:36.852674Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4474551908",
+      "title": "Senior UX Designer",
+      "company": "CoAd",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4474551908",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-13T14:01:18.957425Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489556943",
+      "title": "UI/UX Designer",
+      "company": "Techdome",
+      "location": "Indore, Madhya Pradesh, India",
+      "url": "https://www.linkedin.com/jobs/view/4489556943",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T14:01:18.957477Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490717802",
+      "title": "UX/UI Designer",
+      "company": "We Are META",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490717802",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T14:01:18.957488Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488928804",
+      "title": "Graphic & UI/UX Designer",
+      "company": "OMEX INFOTECH",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4488928804",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T14:01:18.957497Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4480055504",
+      "title": "Senior UX Designer (Design Systems)",
+      "company": "Housing & Development Board",
+      "location": "Singapore, Singapore",
+      "url": "https://www.linkedin.com/jobs/view/4480055504",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-13T14:01:18.957505Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4434593220",
+      "title": "UX/UI Designer",
+      "company": "KLA",
+      "location": "Newport, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4434593220",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T14:01:18.957513Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490736125",
+      "title": "UX Designer",
+      "company": "Candour",
+      "location": "Warrington, England, UK",
+      "url": "https://www.linkedin.com/jobs/view/4490736125",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T14:01:18.957521Z",
+      "ats_platform": "custom"
     }
   ]
 }
