@@ -3398,6 +3398,28 @@
       "match_score": 65,
       "scraped_at": "2026-11-13T07:30:57.776538Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4479935907",
+      "title": "Intern/Co-Op-UX Designer",
+      "company": "Consumers Energy",
+      "location": "Michigan, United States",
+      "url": "https://www.linkedin.com/jobs/view/4479935907",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T08:00:39.811302Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489551358",
+      "title": "UI/UX Designer & Creative Content Intern",
+      "company": "W3ICON",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489551358",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T08:00:39.811339Z",
+      "ats_platform": "custom"
     }
   ]
 }
