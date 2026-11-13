@@ -3640,6 +3640,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-13T12:01:26.548953Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489556712",
+      "title": "User Experience Designer",
+      "company": "Integer Consulting",
+      "location": "Braga, Portugal",
+      "url": "https://www.linkedin.com/jobs/view/4489556712",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T13:01:36.852629Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489572302",
+      "title": "UI/UX Designer",
+      "company": "Ciena",
+      "location": "Gurugram, Haryana, India",
+      "url": "https://www.linkedin.com/jobs/view/4489572302",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T13:01:36.852664Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490702578",
+      "title": "UI/UX Designer",
+      "company": "Tern & Loom",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4490702578",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T13:01:36.852674Z",
+      "ats_platform": "custom"
     }
   ]
 }
