@@ -3002,6 +3002,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-12T23:30:59.292593Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488579627",
+      "title": "(USA) Senior UX Designer",
+      "company": "Walmart Connect",
+      "location": "San Bruno, CA",
+      "url": "https://www.linkedin.com/jobs/view/4488579627",
+      "source": "Linkedin",
+      "match_score": 60,
+      "scraped_at": "2026-11-13T00:00:40.789669Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490536593",
+      "title": "Junior Experience Designer",
+      "company": "ANZ",
+      "location": "Wellington, Wellington, New Zealand",
+      "url": "https://www.linkedin.com/jobs/view/4490536593",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-13T00:00:40.789706Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4490532315",
+      "title": "Senior UX Designer",
+      "company": "Breville | Sage",
+      "location": "Sydney, New South Wales, Australia",
+      "url": "https://www.linkedin.com/jobs/view/4490532315",
+      "source": "Linkedin",
+      "match_score": 65,
+      "scraped_at": "2026-11-13T00:00:40.789716Z",
+      "ats_platform": "custom"
     }
   ]
 }
