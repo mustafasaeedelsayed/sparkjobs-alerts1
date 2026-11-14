@@ -4234,6 +4234,39 @@
       "match_score": 75,
       "scraped_at": "2026-11-14T00:00:39.717914Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488192257",
+      "title": "User Experience Designer (12-months)",
+      "company": "AMA - Alberta Motor Association",
+      "location": "Edmonton, Alberta, Canada",
+      "url": "https://www.linkedin.com/jobs/view/4488192257",
+      "source": "Linkedin",
+      "match_score": 75,
+      "scraped_at": "2026-11-14T01:00:40.897978Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4491001946",
+      "title": "UX Designer",
+      "company": "AgileGrid Solutions",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4491001946",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-14T01:00:40.898007Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489844213",
+      "title": "Gaming UX Designer",
+      "company": "Aquent",
+      "location": "Redmond, WA",
+      "url": "https://www.linkedin.com/jobs/view/4489844213",
+      "source": "Linkedin",
+      "match_score": 45,
+      "scraped_at": "2026-11-14T01:00:40.898016Z",
+      "ats_platform": "custom"
     }
   ]
 }
