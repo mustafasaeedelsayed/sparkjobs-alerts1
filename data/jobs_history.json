@@ -4267,6 +4267,28 @@
       "match_score": 45,
       "scraped_at": "2026-11-14T01:00:40.898016Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4491014556",
+      "title": "Game UI/UX Designer (Mandarin Required)",
+      "company": "Bitus Labs",
+      "location": "Irvine, CA",
+      "url": "https://www.linkedin.com/jobs/view/4491014556",
+      "source": "Linkedin",
+      "match_score": 25,
+      "scraped_at": "2026-11-14T01:30:55.092493Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4491012841",
+      "title": "UX/UI Designer",
+      "company": "Provation",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4491012841",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-14T01:30:55.092533Z",
+      "ats_platform": "custom"
     }
   ]
 }
