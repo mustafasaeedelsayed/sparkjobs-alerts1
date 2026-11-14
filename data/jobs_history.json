@@ -4289,6 +4289,39 @@
       "match_score": 85,
       "scraped_at": "2026-11-14T01:30:55.092533Z",
       "ats_platform": "custom"
+    },
+    {
+      "id": "li-4488988262",
+      "title": "Graphic Design Intern & UI/UX Designer Intern",
+      "company": "Vyntrivo",
+      "location": "Faisalabad, Punjab, Pakistan",
+      "url": "https://www.linkedin.com/jobs/view/4488988262",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-14T03:00:39.239566Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489861133",
+      "title": "Figma Designer (Remote)",
+      "company": "Hired",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489861133",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-14T03:00:39.239887Z",
+      "ats_platform": "custom"
+    },
+    {
+      "id": "li-4489864115",
+      "title": "UI/UX Designer (Remote)",
+      "company": "Hired",
+      "location": "Remote",
+      "url": "https://www.linkedin.com/jobs/view/4489864115",
+      "source": "Linkedin",
+      "match_score": 85,
+      "scraped_at": "2026-11-14T03:00:39.239899Z",
+      "ats_platform": "custom"
     }
   ]
 }
